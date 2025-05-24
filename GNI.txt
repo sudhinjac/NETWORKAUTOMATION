@@ -1,0 +1,233 @@
+gnmic -a 192.168.2.91:6030 -u rayka -p rayka-co.com --insecure subscribe --path /interfaces/interface[name=Ethernet1]/state/counters/in-octets --stream-mode sample --sample-interval 5s
+
+gnmic -a 192.168.2.91:6030 -u rayka -p rayka-co.com --insecure subscribe --path /interfaces/interface[name=Ethernet1]/state/oper-status --stream-mode on_change
+sudo ip route add 192.168.255.0/24 via 172.22.224.1
+
+
+majid@ubuntu2204tls:~$ gnmic -a 192.168.2.91:6030 --username rayka --password rayka-co.com --insecure set --update-path /system/config/domain-name --update-value "rayka-co.com"
+
+majid@ubuntu2204tls:~$ gnmic -a 192.168.2.91:6030 --username rayka --password rayka-co.com --insecure set --update-path /system/config/domain-name --update-value "rayka-co.com"
+
+gnmic -a 192.168.255.138:6030 -u sudhin -p sudhin --insecure get --path /network-instances/network-instance[name=default]/protocols
+
+ python3 gnmi3.py > bgp.json
+sudhin@sudhin:/mnt/d/NETWORKAUTOMATION/TEST$ gnmic -a 192.168.255.138:6030 -u sudhin -p sudhin --insecure get --path /network-instances/network-instance[name=default]/afts > afts.json
+sudhin@sudhin:/mnt/d/NETWORKAUTOMATION/TEST$ gnmic -a 192.168.255.138:6030 -u sudhin -p sudhin --insecure get --path /network-instances/network-instance[name=default] > afts.json
+sudhin@sudhin:/mnt/d/NETWORKAUTOMATION/TEST$ gnmic -a 192.168.255.138:6030 -u sudhin -p sudhin --insecure get --path /network-instances/network-instance[name=default]/protocols
+R1(config-gnmi-transport-default)#exit
+R1(config-mgmt-api-gnmi)#exit
+R1(config)#exit
+!
+R1#show management api gnmi
+Transport: default
+Enabled: yes
+Server: running on port 6030, in default VRF
+SSL profile: none
+QoS DSCP: none
+
+majid@ubuntu2204tls:~$ gnmic -a 192.168.2.91:6030 -u rayka -p rayka-co.com --insecure get --path /
+
+The idea to change the configuration of network devices through gnmi protocol and gnmic is easy. Get the interesting part of the configuration, as we have discussed in the previous section.
+
+change the configuration using gnmi set command
+change the configuration using gnmi set command
+Then the path and the output in the format of json can be used as a sample template to update that part of configuration.
+
+You can also use gnmic interactive mode to find the path to for each part of the configuration as we have discussed in the previous section.
+
+But to be honest, it was not easy for me to update the configuration of network devices. Finding the right path and also the value with the right format is not always easy.
+
+I have prepared some examples, mostly from these two sources just to show you some examples to change the configuration using gnmi set command.
+
+https://gnmic.kmrd.dev/cmd/set/
+https://aristanetworks.github.io/openmgmt/examples/gnmi-clients/gnmic/
+In the first link, you see some examples, how to update, replace or delete a value in the configuration directly in gnmic command line or through an external JSON or YAML file.
+
+But the second link is a better choice for us since examples are in the context of arista network and we are also testing on an arista virtual device.
+
+Examples are to create BGP configuration, create access-list and shutdown or bring up an interface.
+
+Of-course the changes can be done through gnmic normal mode or interactive mode.
+
+gnmi set Examples
+In the first example, we change the description of interface “Ethernet1” using gnmi “set” command and “update-path” and “update-value” parameters.
+
+Just to remember, you can find the path for each part of configuration through gnmic interactive mode much easier.
+
+!!! interface Ethernet before running gnmic set command
+R1#show runn int ethernet 1
+interface Ethernet1
+   no switchport
+   ip address 10.10.10.1/24
+majid@ubuntu2204tls:~$ gnmic -a 192.168.2.91:6030 --username rayka --password rayka-co.com --insecure set --update-path interfaces/interface[name=Ethernet1]/config/description --update-value "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
+{
+  "source": "192.168.2.91:6030",
+  "timestamp": 1684942240985192471,
+  "time": "2023-05-24T17:30:40.985192471+02:00",
+  "results": [
+    {
+      "operation": "UPDATE",
+      "path": "interfaces/interface[name=Ethernet1]/config/description"
+    }
+  ]
+}
+!!! interface Ethernet after running gnmic set command
+R1#show runn int ethernet 1
+interface Ethernet1
+   description DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+   no switchport
+   ip address 10.10.10.1/24
+Changing the hostname and domain-name are two other examples implemented with the same method.
+
+majid@ubuntu2204tls:~$ gnmic -a 192.168.2.91:6030 --username rayka --password rayka-co.com --insecure set --update-path /system/config/hostname --update-value "R1"
+{
+  "source": "192.168.2.91:6030",
+  "timestamp": 1684942258815542644,
+  "time": "2023-05-24T17:30:58.815542644+02:00",
+  "results": [
+    {
+      "operation": "UPDATE",
+      "path": "system/config/hostname"
+    }
+  ]
+}
+!
+majid@ubuntu2204tls:~$ gnmic -a 192.168.2.91:6030 --username rayka --password rayka-co.com --insecure set --update-path /system/config/domain-name --update-value "rayka-co.com"
+{
+  "source": "192.168.2.91:6030",
+  "timestamp": 1684942270390843180,
+  "time": "2023-05-24T17:31:10.39084318+02:00",
+  "results": [
+    {
+      "operation": "UPDATE",
+      "path": "system/config/domain-name"
+    }
+  ]
+}
+In the next example we delete description of the interface using gnmi “set” command and “delete” parameter and the corresponding path.
+
+!!! interface Ethernet before running gnmic delete command
+R1#show runn int ethernet 1
+interface Ethernet1
+   description DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+   no switchport
+   ip address 10.10.10.1/24
+majid@ubuntu2204tls:~$ gnmic -a 192.168.2.91:6030 --username rayka --password rayka-co.com --insecure set --delete /interfaces/interface[name=Ethernet1]/config/description
+{
+  "source": "192.168.2.91:6030",
+  "timestamp": 1684942345198965097,
+  "time": "2023-05-24T17:32:25.198965097+02:00",
+  "results": [
+    {
+      "operation": "DELETE",
+      "path": "interfaces/interface[name=Ethernet1]/config/description"
+    }
+  ]
+}
+!!! interface Ethernet after running gnmic delete command
+R1#show runn int ethernet 1
+interface Ethernet1
+   no switchport
+   ip address 10.10.10.1/24
+use external json file to change the configuration
+In the next example, we use external JSON file to update hostname and domain-name.
+
+majid@devnet:~$ cat system.json 
+{
+  "openconfig-system:domain-name": "rayka-co.com",
+  "openconfig-system:hostname": "R1"
+}
+majid@ubuntu2204tls:~$ gnmic -a 192.168.2.91:6030 --username rayka --password rayka-co.com --insecure set --update-path /system/config --update-file system.json
+{
+  "source": "192.168.2.91:6030",
+  "timestamp": 1684942417865523418,
+  "time": "2023-05-24T17:33:37.865523418+02:00",
+  "results": [
+    {
+      "operation": "UPDATE",
+      "path": "system/config"
+    }
+  ]
+}
+To prepare the JSON file, it is enough to get the configuration through “gnmic get” command and the output can be used as a sample template to update the configuration.
+
+I the last example that I have get from the above mentioned website, we will create a new neighbour in BGP configuration through external JSON file.
+
+!!! BGP Configuration before changes
+router bgp 65500
+   router-id 1.1.1.1
+   neighbor 10.10.10.2 remote-as 65501
+   network 10.10.10.0/24
+majid@devnet:~$ cat neighbor.json 
+{"config": {"neighbor-address":"10.11.12.13", "peer-as": 123}}
+majid@devnet:~$ gnmic -a 192.168.2.91:6030 -u rayka -p rayka-co.com --insecure --gzip set --update-path '/network-instances/network-instance[name=default]/protocols/protocol[name=BGP]/bgp/neighbors/neighbor[neighbor-address=10.11.12.13]' --update-file neighbor.json
+{
+  "source": "192.168.2.91:6030",
+  "timestamp": 1684806421699225561,
+  "time": "2023-05-23T03:47:01.699225561+02:00",
+  "results": [
+    {
+      "operation": "UPDATE",
+      "path": "network-instances/network-instance[name=default]/protocols/protocol[name=BGP]/bgp/neighbors/neighbor[neighbor-address=10.11.12.13]"
+    }
+  ]
+}
+!!! BGP Configuration after changes
+router bgp 65500
+   router-id 1.1.1.1
+   neighbor 10.10.10.2 remote-as 65501
+   neighbor 10.11.12.13 remote-as 123
+   network 10.10.10.0/24
+   
+   
+   gnmi subscribe command
+In the previous sections, we have already discussed and implemented the gnmi get and set commands with gnmic tool.
+
+In this section will be dedicated to the most interesting gnmi command, “subscribe”.
+
+gnmi subscribe streaming modes
+gnmi subscribe streaming modes
+With “Subscribe”, any software can subscribe to any data in the yang data model structure in order to receive the data whenever it changes or at certain intervals.
+
+In other words, the gnmi subscribe command can be used to stream data to all telemetry subscribers at any time.
+
+With gnmi streaming “sample” mode, data will be streamed at regular interval and with gnmi streaming “on_change” mode, data will be streamed whenever it changes.
+
+A good example for “on_change” mode is interface status. You subscribe to receive the interface status whenever it changes.
+
+A good example of “sample” mode is the interface bandwidth. You subscribe to receive inbound and outbound interface statistics at regular intervals to monitor inbound and outbound bandwidth usage.
+
+gnmi streaming mode is typically used in conjunction with monitoring packages like Influxdb, telegraf, and grafana software package for monitoring purposes.
+
+gnmi streaming examples with gnmic
+To better understand gnmi subscribe command and streaming mode, I have prepared two examples. Interface incoming traffic statistics with sample streaming mode and interface status with on_change streaming mode.
+
+monitor interface statistics with gnmi subscribe sample mode
+This is the command to monitor incoming traffic of interface ethernet1 with sample streaming mode.
+
+Instead of the “get” or “set” command, we use the “subscribe” command in this example.
+
+The path is known to us since we have already discussed in gnmi “get” command and gnmic interactive mode.
+
+With “stream-mode” parameter in which we see in the subscribe command, we have definedthe streaming mode as “sample”. And sampling interval is also configured to 5 seconds.
+
+gnmic -a 192.168.2.91:6030 -u rayka -p rayka-co.com --insecure subscribe --path /interfaces/interface[name=Ethernet1]/state/counters/in-octets --stream-mode sample --sample-interval 5s
+Let’s run the command to see how the incoming statistics of the Ethernet1 interface are displayed in the output every 5 seconds.
+
+gnmi streaming sample mode
+gnmi streaming sample mode
+monitor interface status with gnmi subscribe on_change mode
+In the second example, we monitor the status of the Ethernet1 interface and the streaming mode is configured as “on_change” mode, which means that every interface status changes are streamed to the subscribers.
+
+gnmic -a 192.168.2.91:6030 -u rayka -p rayka-co.com --insecure subscribe --path /interfaces/interface[name=Ethernet1]/state/oper-status --stream-mode on_change
+To see the example, let’s run the command and then manually disable and enable the interface using the “shutdown” and “no Shutdown” commands.
+
+It is expected that whenever there is a status change, the new status will be streamed to the subscriber.
+
+gnmi streaming on_change mode
+gnmi streaming on_change mode
+From these two examples, I hope that the application of gnmi streaming mode or subscribe command is clear to us.
+
+But in this link, which we also discussed in the previous section, you can see some other examples of gnmi streaming mode with Arista network devices.
+
+

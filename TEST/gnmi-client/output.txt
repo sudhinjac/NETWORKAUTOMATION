@@ -1,0 +1,426 @@
+Calling Capabilities RPC...
+Supported Models:
+ - Name: arista-nat-nat-dynamic, Version: 0.1.0
+ - Name: arista-macsec-notsupported-deviations, Version: 
+ - Name: arista-arnet-ip, Version: 0.1.0
+ - Name: arista-traffic-policy, Version: 1.0.0
+ - Name: arista-sampling-notsupported-deviations, Version: 
+ - Name: openconfig-srte-policy, Version: 0.2.3
+ - Name: openconfig-system-grpc, Version: 1.0.0
+ - Name: openconfig-macsec, Version: 1.1.1
+ - Name: openconfig-isis, Version: 1.7.0
+ - Name: arista-relay-agent-deviations, Version: 1.0.1
+ - Name: ietf-yang-metadata, Version: 
+ - Name: arista-cli, Version: 
+ - Name: arista-sand-hardware-drop-counters, Version: 1.0.0
+ - Name: arista-acl-notsupported-deviations, Version: 
+ - Name: openconfig-ospfv2, Version: 0.5.1
+ - Name: openconfig-isis-lsdb-types, Version: 0.4.2
+ - Name: arista-netinst-deviations, Version: 1.1.4
+ - Name: openconfig-routing-policy, Version: 3.4.2
+ - Name: arista-l1-open-config-optical-channel-model-aug, Version: 1.0.0
+ - Name: openconfig-license, Version: 0.2.0
+ - Name: arista-bfd-augments, Version: 1.1.0
+ - Name: openconfig-hercules-qos, Version: 0.1.0
+ - Name: arista-lacp-notsupported-deviations, Version: 
+ - Name: openconfig-isis-types, Version: 0.6.0
+ - Name: arista-pim-augments, Version: 1.0.1
+ - Name: arista-routing-policy-notsupported-deviations, Version: 
+ - Name: openconfig-isis-flex-algo, Version: 0.6.1
+ - Name: arista-ospf-deviations, Version: 4.2.0
+ - Name: arista-vlan-augments, Version: 1.1.2
+ - Name: openconfig-if-ethernet, Version: 2.13.0
+ - Name: arista-l1-open-config-xcvr-oc-types, Version: 1.0.0
+ - Name: openconfig-sampling, Version: 0.1.0
+ - Name: openconfig-system-terminal, Version: 0.3.1
+ - Name: arista-isis-deviations, Version: 1.9.0
+ - Name: openconfig-pim, Version: 0.4.3
+ - Name: arista-macsec-deviations, Version: 1.0.0
+ - Name: arista-exp-eos-l2protocolforwarding, Version: 
+ - Name: openconfig-network-instance-types, Version: 0.9.3
+ - Name: arista-spanning-tree-notsupported-deviations, Version: 
+ - Name: arista-pseudowire-pseudowire-status, Version: 1.0.0
+ - Name: openconfig-mpls-types, Version: 3.4.0
+ - Name: arista-mpls-deviations, Version: 1.0.2
+ - Name: openconfig-platform-types, Version: 1.6.0
+ - Name: openconfig-procmon, Version: 0.4.0
+ - Name: arista-exp-eos-vxlan-config, Version: 0.2.1
+ - Name: arista-network-instance-notsupported-deviations, Version: 
+ - Name: openconfig-ospf-policy, Version: 0.1.3
+ - Name: arista-exp-eos-qos-acl-config, Version: 
+ - Name: arista-system-session, Version: 0.1.0
+ - Name: arista-bgp-augments, Version: 2.24.0
+ - Name: openconfig-ospf-types, Version: 0.1.3
+ - Name: openconfig-vlan-types, Version: 3.2.0
+ - Name: arista-intf-deviations, Version: 1.0.6
+ - Name: arista-rcf-rcf-open-config, Version: 1.0.0
+ - Name: openconfig-metadata, Version: 0.1.0
+ - Name: arista-qos-notsupported-deviations, Version: 
+ - Name: arista-mpls-augments, Version: 1.3.1
+ - Name: arista-arnet-conn-tuple, Version: 0.1.0
+ - Name: arista-telemetry-notsupported-deviations, Version: 
+ - Name: arista-ale-counters-open-config-hardware-drop-counters, Version: 1.0.0
+ - Name: arista-lldp-deviations, Version: 1.1.0
+ - Name: ietf-interfaces, Version: 
+ - Name: openconfig-local-routing, Version: 2.0.1
+ - Name: openconfig-packet-match, Version: 2.1.0
+ - Name: arista-exp-eos-mlag, Version: 
+ - Name: arista-gnoi-cert, Version: 
+ - Name: openconfig-platform-linecard, Version: 1.1.0
+ - Name: arista-lldp-augments, Version: 1.0.1
+ - Name: openconfig-platform-pipeline-counters, Version: 0.5.1
+ - Name: openconfig-telemetry, Version: 0.5.1
+ - Name: arista-ebra-vlan-tpid, Version: 1.0.0
+ - Name: arista-bgp-deviations, Version: 1.25.3
+ - Name: arista-platform-notsupported-deviations, Version: 
+ - Name: arista-exp-eos-qos-config, Version: 0.2.0
+ - Name: arista-lldp-notsupported-deviations, Version: 
+ - Name: arista-netinst-augments, Version: 1.2.0
+ - Name: openconfig-types, Version: 1.0.0
+ - Name: openconfig-platform-fan, Version: 0.1.1
+ - Name: openconfig-system-controlplane, Version: 0.2.0
+ - Name: openconfig-sampling-sflow, Version: 1.0.0
+ - Name: openconfig-transport-types, Version: 0.24.0
+ - Name: openconfig-pim-types, Version: 0.1.1
+ - Name: ietf-inet-types, Version: 
+ - Name: openconfig-aft-types, Version: 1.1.0
+ - Name: openconfig-p4rt, Version: 1.0.0
+ - Name: ietf-yang-types, Version: 
+ - Name: arista-fhrp-fhrp-status, Version: 1.0.0
+ - Name: arista-srte-deviations, Version: 1.1.2
+ - Name: arista-intf-augments, Version: 1.7.3
+ - Name: arista-sflow-deviations, Version: 1.0.2
+ - Name: openconfig-bgp-types, Version: 6.0.0
+ - Name: gnsi-certz, Version: 
+ - Name: openconfig-platform, Version: 0.24.0
+ - Name: openconfig-hercules-platform, Version: 0.2.0
+ - Name: openconfig-evpn, Version: 0.7.0
+ - Name: arista-local-routing-deviations, Version: 1.0.2
+ - Name: arista-telemetry-augments, Version: 1.0.0
+ - Name: arista-exp-eos-bgp, Version: 1.3.0
+ - Name: openconfig-aft-summary, Version: 0.2.0
+ - Name: openconfig-telemetry-types, Version: 0.4.2
+ - Name: ietf-netconf, Version: 
+ - Name: openconfig-platform-transceiver, Version: 0.14.0
+ - Name: vlan-translation, Version: 
+ - Name: openconfig-aaa-types, Version: 0.4.1
+ - Name: arista-l1-open-config-platform-model-aug, Version: 1.0.0
+ - Name: arista-srte-augments, Version: 1.1.1
+ - Name: openconfig-system, Version: 2.0.0
+ - Name: openconfig-keychain-types, Version: 0.2.0
+ - Name: openconfig-segment-routing, Version: 0.4.1
+ - Name: arista-interfaces-rates, Version: 0.1.0
+ - Name: openconfig-pcep, Version: 0.1.1
+ - Name: openconfig-terminal-device, Version: 1.9.1
+ - Name: openconfig-platform-port, Version: 1.0.1
+ - Name: arista-ospf-augments, Version: 4.2.0
+ - Name: arista-system-deviations, Version: 1.4.0
+ - Name: openconfig-platform-cpu, Version: 0.1.1
+ - Name: arista-vlan-deviations, Version: 1.0.2
+ - Name: openconfig-defined-sets, Version: 1.0.0
+ - Name: arista-exp-eos, Version: 
+ - Name: gnsi-credentialz, Version: 
+ - Name: arista-exp-eos-evpn, Version: 
+ - Name: openconfig-if-ip, Version: 3.5.1
+ - Name: openconfig-vlan, Version: 3.2.2
+ - Name: openconfig-relay-agent, Version: 0.1.2
+ - Name: arista-acl-spec, Version: 0.1.0
+ - Name: openconfig-mpls, Version: 3.4.0
+ - Name: arista-exp-eos-qos, Version: 
+ - Name: arista-lacp-deviations, Version: 1.1.4
+ - Name: arista-rpol-deviations, Version: 1.0.9
+ - Name: openconfig-platform-integrated-circuit, Version: 0.3.1
+ - Name: openconfig-mpls-ldp, Version: 3.2.1
+ - Name: arista-exp-eos-igmpsnooping, Version: 
+ - Name: openconfig-bgp, Version: 9.7.1
+ - Name: openconfig-icmpv4-types, Version: 0.1.0
+ - Name: openconfig-lldp-types, Version: 0.1.1
+ - Name: openconfig-system-utilization, Version: 0.1.0
+ - Name: arista-aft-augments, Version: 1.0.1
+ - Name: openconfig-packet-match-types, Version: 1.3.3
+ - Name: openconfig-aaa, Version: 1.0.0
+ - Name: openconfig-lldp, Version: 0.2.1
+ - Name: arista-keychain-notsupported-deviations, Version: 
+ - Name: arista-qos-augments, Version: 0.0.4
+ - Name: openconfig-if-sdn-ext, Version: 0.2.0
+ - Name: arista-sflow-augments, Version: 1.1.0
+ - Name: openconfig-aft, Version: 2.4.0
+ - Name: arista-flex-algo-augments, Version: 1.0.0
+ - Name: openconfig-qos, Version: 0.11.2
+ - Name: arista-qos-deviations, Version: 1.0.0
+ - Name: openconfig-messages, Version: 0.0.1
+ - Name: iana-if-type, Version: 
+ - Name: openconfig-inet-types, Version: 0.7.0
+ - Name: arista-bgp-common-augments, Version: 1.0.0
+ - Name: arista-exp-eos-vxlan, Version: 
+ - Name: openconfig-platform-controller-card, Version: 0.1.0
+ - Name: openconfig-spanning-tree, Version: 0.3.1
+ - Name: openconfig-platform-fabric, Version: 0.1.0
+ - Name: openconfig-segment-routing-types, Version: 0.2.0
+ - Name: arista-fhrp-fhrp-config, Version: 1.0.0
+ - Name: openconfig-openflow, Version: 0.1.2
+ - Name: arista-segmentation.v1, Version: 
+ - Name: arista-eos-types, Version: 
+ - Name: arista-nat-nat, Version: 1.0.0
+ - Name: openconfig-bgp-policy, Version: 7.0.0
+ - Name: openconfig-if-tunnel, Version: 0.1.1
+ - Name: openconfig-rib-bgp, Version: 0.9.0
+ - Name: arista-arnet-rate, Version: 0.1.0
+ - Name: openconfig-alarm-types, Version: 0.2.1
+ - Name: openconfig-macsec-types, Version: 0.1.0
+ - Name: openconfig-mpls-rsvp, Version: 4.0.1
+ - Name: arista-interfaces-notsupported-deviations, Version: 
+ - Name: openconfig-yang-types, Version: 0.3.1
+ - Name: openconfig-flexalgo, Version: 0.1.0
+ - Name: arista-bfd-notsupported-deviations, Version: 
+ - Name: openconfig-mpls-sr, Version: 3.0.1
+ - Name: arista-lacp-augments, Version: 1.0.1
+ - Name: arista-defined-sets-notsupported-deviations, Version: 
+ - Name: openconfig-programming-errors, Version: 0.1.0
+ - Name: openconfig-rib-bgp-types, Version: 0.5.0
+ - Name: arista-acl-deviations, Version: 1.1.0
+ - Name: arista-bfd-deviations, Version: 1.0.1
+ - Name: openconfig-evpn-types, Version: 0.2.0
+ - Name: openconfig-rib-bgp-ext, Version: 0.6.0
+ - Name: arista-tunnel-tunnel-basic-types, Version: 1.0.0
+ - Name: openconfig-alarms, Version: 0.3.2
+ - Name: arista-ebra-vlan-tag, Version: 1.0.0
+ - Name: arista-isis-augments, Version: 1.13.0
+ - Name: openconfig-network-instance, Version: 4.4.0
+ - Name: openconfig-network-instance-l3, Version: 2.0.0
+ - Name: openconfig-bfd, Version: 0.2.6
+ - Name: openconfig-icmpv6-types, Version: 0.1.1
+ - Name: openconfig-acl, Version: 1.3.3
+ - Name: openconfig-igmp-types, Version: 0.1.1
+ - Name: openconfig-keychain, Version: 0.4.0
+ - Name: arista-ale-counters-open-config-control-plane-traffic-counters, Version: 1.0.0
+ - Name: openconfig-extensions, Version: 0.5.1
+ - Name: arista-system-notsupported-deviations, Version: 
+ - Name: arista-exp-eos-multicast, Version: 
+ - Name: openconfig-if-poe, Version: 0.1.1
+ - Name: openconfig-qos-types, Version: 0.2.1
+ - Name: arista-management-active-management-active-oc-redundancy-state, Version: 1.0.0
+ - Name: openconfig-if-aggregate, Version: 2.4.4
+ - Name: arista-terminal-device-notsupported-deviations, Version: 
+ - Name: arista-rpc-netconf, Version: 
+ - Name: openconfig-pf-srte, Version: 0.2.0
+ - Name: openconfig-interfaces, Version: 3.7.0
+ - Name: arista-arnet-vrf-name, Version: 0.1.0
+ - Name: openconfig-openflow-types, Version: 0.2.0
+ - Name: openconfig-hercules-interfaces, Version: 0.2.0
+ - Name: arista-system-augments, Version: 1.4.1
+ - Name: openconfig-platform-psu, Version: 0.2.1
+ - Name: arista-openflow-deviations, Version: 1.1.1
+ - Name: openconfig-igmp, Version: 0.3.1
+ - Name: arista-flex-algo-deviations, Version: 1.0.0
+ - Name: openconfig-spanning-tree-types, Version: 0.4.1
+ - Name: arista-ebra-intf-encap, Version: 1.0.0
+ - Name: openconfig-aft-network-instance, Version: 0.3.1
+ - Name: openconfig-policy-types, Version: 3.2.3
+ - Name: openconfig-system-logging, Version: 0.6.0
+ - Name: arista-exp-eos-varp-intf, Version: 
+ - Name: arista-messages-notsupported-deviations, Version: 
+ - Name: arista-sand-control-plane-traffic-counters, Version: 1.0.0
+ - Name: arista-intf-intf, Version: 0.1.0
+ - Name: ietf-netconf-monitoring, Version: 
+ - Name: arista-rpol-augments, Version: 1.0.3
+ - Name: openconfig-policy-forwarding, Version: 0.6.1
+ - Name: openconfig-lacp, Version: 2.0.0
+Supported Encodings:
+ - JSON
+ - JSON_IETF
+ - ASCII
+
+Calling Get RPC for /system subtree...
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"admin-user\":{},\"config\":{\"authentication-method\":[\"openconfig-aaa-types:LOCAL\"]},\"state\":{\"authentication-method\":[\"openconfig-aaa-types:LOCAL\"]},\"users\":{\"user\":[{\"config\":{\"password-hashed\":\"\",\"role\":\"openconfig-aaa-types:SYSTEM_ROLE_ADMIN\",\"username\":\"admin\"},\"state\":{\"password-hashed\":\"\",\"role\":\"openconfig-aaa-types:SYSTEM_ROLE_ADMIN\",\"username\":\"admin\"},\"username\":\"admin\"},{\"config\":{\"password-hashed\":\"$6$TQd8hXsbxPpUUtND$V0tGI.UCQcbd1IYgbwBLYxkL33PyZV4yvmrOd55t/YLTch7atebLxgkWfXCCAGXm4we30d9EigLBg7ZkWAfOn0\",\"username\":\"sudhin\"},\"state\":{\"password-hashed\":\"$6$TQd8hXsbxPpUUtND$V0tGI.UCQcbd1IYgbwBLYxkL33PyZV4yvmrOd55t/YLTch7atebLxgkWfXCCAGXm4we30d9EigLBg7ZkWAfOn0\",\"username\":\"sudhin\"},\"username\":\"sudhin\"}]}},\"arista-system-augments:global\":{\"radius\":{\"config\":{\"retransmit-attempts\":3,\"timeout\":5},\"state\":{\"retransmit-attempts\":3,\"timeout\":5}},\"tacacs\":{\"config\":{\"timeout\":5},\"state\":{\"timeout\":5}}}},\"openconfig-system:clock\":{\"config\":{\"timezone-name\":\"UTC\"}},\"openconfig-system:config\":{\"hostname\":\"Arista-New\"},\"openconfig-system-controlplane:control-plane-traffic\":{\"ingress\":{\"acl\":{}}},\"openconfig-system:cpus\":{\"cpu\":[{\"index\":0,\"state\":{\"hardware-interrupt\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":0,\"max-time\":\"1748114776436027050\",\"min\":0,\"min-time\":\"1748114776436027050\"},\"idle\":{\"avg\":97,\"instant\":98,\"interval\":\"1000000000000\",\"max\":99,\"max-time\":\"1748114206432175397\",\"min\":96,\"min-time\":\"1748114326435541391\"},\"index\":0,\"kernel\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":0,\"max-time\":\"1748114776435980319\",\"min\":0,\"min-time\":\"1748114776435980319\"},\"nice\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":0,\"max-time\":\"1748114776435992002\",\"min\":0,\"min-time\":\"1748114776435992002\"},\"software-interrupt\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":0,\"max-time\":\"1748114776436039924\",\"min\":0,\"min-time\":\"1748114776436039924\"},\"total\":{\"avg\":1,\"instant\":1,\"interval\":\"1000000000000\",\"max\":3,\"max-time\":\"1748114226429496288\",\"min\":0,\"min-time\":\"1748114206432133197\"},\"user\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":1,\"max-time\":\"1748114766435520887\",\"min\":0,\"min-time\":\"1748114776435966014\"},\"wait\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":2,\"max-time\":\"1748114326435556888\",\"min\":0,\"min-time\":\"1748114776436016082\"}}},{\"index\":1,\"state\":{\"hardware-interrupt\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":0,\"max-time\":\"1748114776436188459\",\"min\":0,\"min-time\":\"1748114776436188459\"},\"idle\":{\"avg\":97,\"instant\":98,\"interval\":\"1000000000000\",\"max\":99,\"max-time\":\"1748114636424704074\",\"min\":93,\"min-time\":\"1748114626424470901\"},\"index\":1,\"kernel\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":0,\"max-time\":\"1748114776436149120\",\"min\":0,\"min-time\":\"1748114776436149120\"},\"nice\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":0,\"max-time\":\"1748114776436160087\",\"min\":0,\"min-time\":\"1748114776436160087\"},\"software-interrupt\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":0,\"max-time\":\"1748114776436200141\",\"min\":0,\"min-time\":\"1748114776436200141\"},\"total\":{\"avg\":1,\"instant\":1,\"interval\":\"1000000000000\",\"max\":3,\"max-time\":\"1748114346431529760\",\"min\":0,\"min-time\":\"1748114636424683332\"},\"user\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":2,\"max-time\":\"1748114286431190490\",\"min\":0,\"min-time\":\"1748114776436139106\"},\"wait\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":6,\"max-time\":\"1748114626424477815\",\"min\":0,\"min-time\":\"1748114776436177968\"}}},{\"index\":\"ALL\",\"state\":{\"hardware-interrupt\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":0,\"max-time\":\"1748114776436325550\",\"min\":0,\"min-time\":\"1748114776436325550\"},\"idle\":{\"avg\":97,\"instant\":98,\"interval\":\"1000000000000\",\"max\":99,\"max-time\":\"1748114546430440664\",\"min\":96,\"min-time\":\"1748114626424568653\"},\"index\":\"ALL\",\"kernel\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":0,\"max-time\":\"1748114776436284303\",\"min\":0,\"min-time\":\"1748114776436284303\"},\"nice\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":0,\"max-time\":\"1748114776436295509\",\"min\":0,\"min-time\":\"1748114776436295509\"},\"software-interrupt\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":0,\"max-time\":\"1748114776436336755\",\"min\":0,\"min-time\":\"1748114776436336755\"},\"total\":{\"avg\":1,\"instant\":1,\"interval\":\"1000000000000\",\"max\":3,\"max-time\":\"1748114276436368703\",\"min\":0,\"min-time\":\"1748114626424547195\"},\"user\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":1,\"max-time\":\"1748114766435888290\",\"min\":0,\"min-time\":\"1748114776436272382\"},\"wait\":{\"avg\":0,\"instant\":0,\"interval\":\"1000000000000\",\"max\":3,\"max-time\":\"1748114626424573898\",\"min\":0,\"min-time\":\"1748114776436316251\"}}}]},\"arista-system-augments:fhrp\":{},\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"config\":{\"enable\":true,\"metadata-authentication\":false,\"name\":\"default\",\"network-instance\":\"default\",\"port\":6030,\"transport-security\":false},\"name\":\"default\",\"state\":{\"enable\":true,\"metadata-authentication\":false,\"name\":\"default\",\"network-instance\":\"default\",\"port\":6030,\"transport-security\":false}},{\"config\":{\"enable\":true,\"metadata-authentication\":false,\"name\":\"defualt\",\"network-instance\":\"default\",\"port\":6030,\"transport-security\":false},\"name\":\"defualt\",\"state\":{\"enable\":true,\"metadata-authentication\":false,\"name\":\"defualt\",\"network-instance\":\"default\",\"port\":6030,\"transport-security\":false}}]},\"openconfig-system:logging\":{\"console\":{\"selectors\":{\"selector\":[{\"config\":{\"facility\":\"ALL\",\"severity\":\"ERROR\"},\"facility\":\"ALL\",\"severity\":\"ERROR\",\"state\":{\"facility\":\"ALL\",\"severity\":\"ERROR\"}}]}}},\"openconfig-system:mac-address\":{\"config\":{\"routing-mac\":\"00:00:00:00:00:00\"},\"state\":{\"routing-mac\":\"00:00:00:00:00:00\"}},\"openconfig-system:memory\":{\"arista-system-augments:kernel\":{\"state\":{\"active\":\"297238528\",\"anon-pages\":\"774840320\",\"bounce-buffers\":\"0\",\"buffers\":\"6553600\",\"cached\":\"1353383936\",\"commit-limit\":\"2028388352\",\"committed-as\":\"1856155648\",\"direct-map-1g\":\"3221225472\",\"direct-map-2m\":\"3126853632\",\"direct-map-4k\":\"94175232\",\"dirty\":\"0\",\"inactive\":\"1837531136\",\"kernel-stack\":\"4243456\",\"mapped\":\"655122432\",\"page-tables\":\"16678912\",\"shmem\":\"157888512\",\"slab\":\"163721216\",\"slab-reclaimable\":\"82882560\",\"slab-unreclaim\":\"80838656\",\"swap-cached\":\"0\",\"swap-free\":\"0\",\"swap-total\":\"0\",\"vmalloc-total\":\"35184372087808\",\"writeback\":\"0\",\"writeback-tmp\":\"0\"}},\"state\":{\"free\":\"2829008896\",\"physical\":\"4056776704\",\"reserved\":\"2359644160\",\"used\":\"1227767808\"}},\"openconfig-system:messages\":{\"state\":{\"message\":{\"app-name\":\"dhclient\",\"msg\":\"May 24 19:17:54 Arista-New dhclient[2614]: bound to 192.168.255.138 -- renewal in 773 seconds.\",\"priority\":6,\"procid\":\"2614\"}}},\"openconfig-openflow:openflow\":{\"agent\":{\"state\":{}}},\"openconfig-system:processes\":{\"process\":[{\"pid\":\"1\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"438\",\"cpu-usage-user\":\"83\",\"cpu-utilization\":0,\"memory-usage\":\"12488704\",\"memory-utilization\":0,\"name\":\"systemd\",\"pid\":\"1\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"2\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kthreadd\",\"pid\":\"2\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"3\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"rcu_gp\",\"pid\":\"3\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"4\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"rcu_par_gp\",\"pid\":\"4\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"6\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kworker/0:0H-events_highpri\",\"pid\":\"6\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"8\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"mm_percpu_wq\",\"pid\":\"8\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"9\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"rcu_tasks_kthre\",\"pid\":\"9\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"10\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"rcu_tasks_rude_\",\"pid\":\"10\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"11\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"rcu_tasks_trace\",\"pid\":\"11\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"12\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"33\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"ksoftirqd/0\",\"pid\":\"12\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"13\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"252\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"rcu_preempt\",\"pid\":\"13\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"14\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"13\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"migration/0\",\"pid\":\"14\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"16\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"cpuhp/0\",\"pid\":\"16\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"17\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"cpuhp/1\",\"pid\":\"17\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"18\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"11\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"migration/1\",\"pid\":\"18\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"19\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"29\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"ksoftirqd/1\",\"pid\":\"19\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"21\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kworker/1:0H-events_highpri\",\"pid\":\"21\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"22\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kdevtmpfs\",\"pid\":\"22\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"23\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"netns\",\"pid\":\"23\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"25\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"65\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"khungtaskd\",\"pid\":\"25\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"26\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"oom_reaper\",\"pid\":\"26\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"27\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"writeback\",\"pid\":\"27\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"28\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"13\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kcompactd0\",\"pid\":\"28\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"41\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kintegrityd\",\"pid\":\"41\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"42\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kblockd\",\"pid\":\"42\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"43\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"blkcg_punt_bio\",\"pid\":\"43\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"44\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"ata_sff\",\"pid\":\"44\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"45\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"edac-poller\",\"pid\":\"45\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"46\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"watchdogd\",\"pid\":\"46\",\"start-time\":\"1748096481149415969\"}},{\"pid\":\"47\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"18\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kworker/0:1H-kblockd\",\"pid\":\"47\",\"start-time\":\"1748096482149415969\"}},{\"pid\":\"48\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"rpciod\",\"pid\":\"48\",\"start-time\":\"1748096482149415969\"}},{\"pid\":\"49\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kworker/u81:0\",\"pid\":\"49\",\"start-time\":\"1748096482149415969\"}},{\"pid\":\"50\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"xprtiod\",\"pid\":\"50\",\"start-time\":\"1748096482149415969\"}},{\"pid\":\"59\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kswapd0\",\"pid\":\"59\",\"start-time\":\"1748096482149415969\"}},{\"pid\":\"60\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"nfsiod\",\"pid\":\"60\",\"start-time\":\"1748096482149415969\"}},{\"pid\":\"61\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"pcielwd\",\"pid\":\"61\",\"start-time\":\"1748096483149415969\"}},{\"pid\":\"63\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"nvme-wq\",\"pid\":\"63\",\"start-time\":\"1748096483149415969\"}},{\"pid\":\"64\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"nvme-reset-wq\",\"pid\":\"64\",\"start-time\":\"1748096483149415969\"}},{\"pid\":\"65\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"nvme-delete-wq\",\"pid\":\"65\",\"start-time\":\"1748096483149415969\"}},{\"pid\":\"66\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"scsi_eh_0\",\"pid\":\"66\",\"start-time\":\"1748096483149415969\"}},{\"pid\":\"67\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"scsi_tmf_0\",\"pid\":\"67\",\"start-time\":\"1748096483149415969\"}},{\"pid\":\"68\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"scsi_eh_1\",\"pid\":\"68\",\"start-time\":\"1748096483149415969\"}},{\"pid\":\"69\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"scsi_tmf_1\",\"pid\":\"69\",\"start-time\":\"1748096483149415969\"}},{\"pid\":\"71\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"2\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kworker/1:2-events\",\"pid\":\"71\",\"start-time\":\"1748096483149415969\"}},{\"pid\":\"72\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"20\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kworker/u80:3-events_unbound\",\"pid\":\"72\",\"start-time\":\"1748096483149415969\"}},{\"pid\":\"73\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"15\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kworker/1:1H-kblockd\",\"pid\":\"73\",\"start-time\":\"1748096483149415969\"}},{\"pid\":\"74\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"ixgbe\",\"pid\":\"74\",\"start-time\":\"1748096488149415969\"}},{\"pid\":\"75\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"ice\",\"pid\":\"75\",\"start-time\":\"1748096488149415969\"}},{\"pid\":\"76\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"dm_bufio_cache\",\"pid\":\"76\",\"start-time\":\"1748096488149415969\"}},{\"pid\":\"77\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"ipv6_addrconf\",\"pid\":\"77\",\"start-time\":\"1748096488149415969\"}},{\"pid\":\"78\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kstrp\",\"pid\":\"78\",\"start-time\":\"1748096488149415969\"}},{\"pid\":\"79\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"ecc_log_wq\",\"pid\":\"79\",\"start-time\":\"1748096488149415969\"}},{\"pid\":\"351\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"46\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"jbd2/sda2-8\",\"pid\":\"351\",\"start-time\":\"1748096495149415969\"}},{\"pid\":\"352\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"ext4-rsv-conver\",\"pid\":\"352\",\"start-time\":\"1748096495149415969\"}},{\"pid\":\"573\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"590\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"loop0\",\"pid\":\"573\",\"start-time\":\"1748096510149415969\"}},{\"pid\":\"670\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"32\",\"cpu-usage-user\":\"24\",\"cpu-utilization\":0,\"memory-usage\":\"9224192\",\"memory-utilization\":0,\"name\":\"systemd-journal\",\"pid\":\"670\",\"start-time\":\"1748096541149415969\"}},{\"pid\":\"802\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"1046\",\"cpu-usage-user\":\"7\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kworker/1:3-events\",\"pid\":\"802\",\"start-time\":\"1748096547149415969\"}},{\"pid\":\"827\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"11\",\"cpu-usage-user\":\"10\",\"cpu-utilization\":0,\"memory-usage\":\"10051584\",\"memory-utilization\":0,\"name\":\"systemd-udevd\",\"pid\":\"827\",\"start-time\":\"1748096554149415969\"}},{\"pid\":\"864\",\"state\":{\"args\":[\"-w 1024 -v 1 --Foreground -v 64\"],\"cpu-usage-system\":\"10\",\"cpu-usage-user\":\"44\",\"cpu-utilization\":0,\"memory-usage\":\"4825088\",\"memory-utilization\":0,\"name\":\"haveged\",\"pid\":\"864\",\"start-time\":\"1748096555149415969\"}},{\"pid\":\"980\",\"state\":{\"args\":[\"/usr/sbin/core_annotate_util daemon\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"3039232\",\"memory-utilization\":0,\"name\":\"core_annotate_u\",\"pid\":\"980\",\"start-time\":\"1748096560149415969\"}},{\"pid\":\"1165\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"38\",\"cpu-usage-user\":\"6\",\"cpu-utilization\":0,\"memory-usage\":\"724992\",\"memory-utilization\":0,\"name\":\"ProcMonitor\",\"pid\":\"1165\",\"start-time\":\"1748096578149415969\"}},{\"pid\":\"1167\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"131\",\"cpu-usage-user\":\"50\",\"cpu-utilization\":0,\"memory-usage\":\"1454080\",\"memory-utilization\":0,\"name\":\"SlabMonitor\",\"pid\":\"1167\",\"start-time\":\"1748096578149415969\"}},{\"pid\":\"1175\",\"state\":{\"args\":[\"/usr/sbin/rasdfilter.sh\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"2228224\",\"memory-utilization\":0,\"name\":\"rasdfilter.sh\",\"pid\":\"1175\",\"start-time\":\"1748096578149415969\"}},{\"pid\":\"1180\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"4\",\"cpu-usage-user\":\"5\",\"cpu-utilization\":0,\"memory-usage\":\"7073792\",\"memory-utilization\":0,\"name\":\"systemd-logind\",\"pid\":\"1180\",\"start-time\":\"1748096578149415969\"}},{\"pid\":\"1184\",\"state\":{\"args\":[\"-f\"],\"cpu-usage-system\":\"13\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"1409024\",\"memory-utilization\":0,\"name\":\"rasdaemon\",\"pid\":\"1184\",\"start-time\":\"1748096579149415969\"}},{\"pid\":\"1185\",\"state\":{\"args\":[\"/mce_record:/ {gsub(/\\\\0/,\\\"\\\"); print; fflush();}\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"1986560\",\"memory-utilization\":0,\"name\":\"awk\",\"pid\":\"1185\",\"start-time\":\"1748096579149415969\"}},{\"pid\":\"1190\",\"state\":{\"args\":[\"-n\"],\"cpu-usage-system\":\"15\",\"cpu-usage-user\":\"3\",\"cpu-utilization\":0,\"memory-usage\":\"3092480\",\"memory-utilization\":0,\"name\":\"crond\",\"pid\":\"1190\",\"start-time\":\"1748096580149415969\"}},{\"pid\":\"1204\",\"state\":{\"args\":[\"--scope system --audit\"],\"cpu-usage-system\":\"6\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"4124672\",\"memory-utilization\":0,\"name\":\"dbus-broker-lau\",\"pid\":\"1204\",\"start-time\":\"1748096580149415969\"}},{\"pid\":\"1251\",\"state\":{\"args\":[\"-stayalive -pidfile /var/run/xinetd.pid\"],\"cpu-usage-system\":\"3\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"2048000\",\"memory-utilization\":0,\"name\":\"xinetd\",\"pid\":\"1251\",\"start-time\":\"1748096585149415969\"}},{\"pid\":\"1254\",\"state\":{\"args\":[\"--log 4 --controller 9 --machine-id 679badbf116d4261b0f14e7c027fae93 --max-bytes 536870912 --max-fds 4096 --max-matches 16384 --audit\"],\"cpu-usage-system\":\"1\",\"cpu-usage-user\":\"2\",\"cpu-utilization\":0,\"memory-usage\":\"1609728\",\"memory-utilization\":0,\"name\":\"dbus-broker\",\"pid\":\"1254\",\"start-time\":\"1748096587149415969\"}},{\"pid\":\"1402\",\"state\":{\"args\":[\"/usr/bin/inotifyrun -c date; pax -x sv4cpio -O -w -f /mnt/flash/persist/local.new . && mv /mnt/flash/persist/local.new /mnt/flash/persist/local || logger -t SetupPersist Failed to update /mnt/flash/persist/local --daemon --ratelimit 0.5 --logfile=/var/log/inotifyrun-local.log --pidfile=/var/run/inotifyrun-local.pid /persist/local\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"6909952\",\"memory-utilization\":0,\"name\":\"python3\",\"pid\":\"1402\",\"start-time\":\"1748096596149415969\"}},{\"pid\":\"1403\",\"state\":{\"args\":[\"-m -r -e modify -e create -e delete -e attrib -e move .\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"856064\",\"memory-utilization\":0,\"name\":\"inotifywait\",\"pid\":\"1403\",\"start-time\":\"1748096596149415969\"}},{\"pid\":\"1420\",\"state\":{\"args\":[\"/usr/bin/inotifyrun -c date; pax -x sv4cpio -O -w -f /mnt/flash/persist/sys.new . && mv /mnt/flash/persist/sys.new /mnt/flash/persist/sys || logger -t SetupPersist Failed to update /mnt/flash/persist/sys --daemon --ratelimit 0.5 --logfile=/var/log/inotifyrun-sys.log --pidfile=/var/run/inotifyrun-sys.pid /persist/sys\"],\"cpu-usage-system\":\"3\",\"cpu-usage-user\":\"1\",\"cpu-utilization\":0,\"memory-usage\":\"6901760\",\"memory-utilization\":0,\"name\":\"python3\",\"pid\":\"1420\",\"start-time\":\"1748096598149415969\"}},{\"pid\":\"1421\",\"state\":{\"args\":[\"-m -r -e modify -e create -e delete -e attrib -e move .\"],\"cpu-usage-system\":\"1\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"802816\",\"memory-utilization\":0,\"name\":\"inotifywait\",\"pid\":\"1421\",\"start-time\":\"1748096598149415969\"}},{\"pid\":\"1434\",\"state\":{\"args\":[\"--dedup --compress --priority Sysdb --maxFiles 1000 /var/tmp/Fossil /mnt/flash/Fossil\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"3833856\",\"memory-utilization\":0,\"name\":\"SaveFossil\",\"pid\":\"1434\",\"start-time\":\"1748096598149415969\"}},{\"pid\":\"1441\",\"state\":{\"args\":[\"/usr/bin/inotifyrun -c date; pax -x sv4cpio -O -w -f /mnt/flash/persist/secure.new . && sync && ( mv /mnt/flash/persist/secure /mnt/flash/persist/secure.old; mv /mnt/flash/persist/secure.new /mnt/flash/persist/secure; sync ) && ( scrub --no-signature /mnt/flash/persist/secure.old; rm /mnt/flash/persist/secure.old ) || logger -t SetupPersist Failed to update /mnt/flash/persist/secure --daemon --ratelimit 0.5 --logfile=/var/log/inotifyrun-secure.log --pidfile=/var/run/inotifyrun-secure.pid /persist/secure\"],\"cpu-usage-system\":\"1\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"6828032\",\"memory-utilization\":0,\"name\":\"python3\",\"pid\":\"1441\",\"start-time\":\"1748096599149415969\"}},{\"pid\":\"1442\",\"state\":{\"args\":[\"-m -r -e modify -e create -e delete -e attrib -e move .\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"1482752\",\"memory-utilization\":0,\"name\":\"inotifywait\",\"pid\":\"1442\",\"start-time\":\"1748096599149415969\"}},{\"pid\":\"1446\",\"state\":{\"args\":[\"/usr/bin/FileClock\"],\"cpu-usage-system\":\"18\",\"cpu-usage-user\":\"2\",\"cpu-utilization\":0,\"memory-usage\":\"2940928\",\"memory-utilization\":0,\"name\":\"bash\",\"pid\":\"1446\",\"start-time\":\"1748096599149415969\"}},{\"pid\":\"1505\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"731\",\"cpu-usage-user\":\"2444\",\"cpu-utilization\":0,\"memory-usage\":\"18829312\",\"memory-utilization\":0,\"name\":\"ProcMgr\",\"pid\":\"1505\",\"start-time\":\"1748096615149415969\"}},{\"pid\":\"1610\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"350\",\"cpu-usage-user\":\"116\",\"cpu-utilization\":0,\"memory-usage\":\"139264\",\"memory-utilization\":0,\"name\":\"EosOomAdjust\",\"pid\":\"1610\",\"start-time\":\"1748096639149415969\"}},{\"pid\":\"1618\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"44\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"rbfd_vrf_cleanu\",\"pid\":\"1618\",\"start-time\":\"1748096640149415969\"}},{\"pid\":\"1624\",\"state\":{\"args\":[\"-f\"],\"cpu-usage-system\":\"1\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"1298432\",\"memory-utilization\":0,\"name\":\"acpid\",\"pid\":\"1624\",\"start-time\":\"1748096640149415969\"}},{\"pid\":\"1633\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"2705\",\"cpu-usage-user\":\"4967\",\"cpu-utilization\":0,\"memory-usage\":\"425127936\",\"memory-utilization\":10,\"name\":\"ConfigAgent\",\"pid\":\"1633\",\"start-time\":\"1748096641149415969\"}},{\"pid\":\"1634\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"54\",\"cpu-usage-user\":\"88\",\"cpu-utilization\":0,\"memory-usage\":\"33300480\",\"memory-utilization\":0,\"name\":\"StageMgr\",\"pid\":\"1634\",\"start-time\":\"1748096641149415969\"}},{\"pid\":\"1635\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"90\",\"cpu-usage-user\":\"134\",\"cpu-utilization\":0,\"memory-usage\":\"85872640\",\"memory-utilization\":2,\"name\":\"Fru\",\"pid\":\"1635\",\"start-time\":\"1748096641149415969\"}},{\"pid\":\"1636\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"75\",\"cpu-usage-user\":\"259\",\"cpu-utilization\":0,\"memory-usage\":\"108310528\",\"memory-utilization\":2,\"name\":\"Launcher\",\"pid\":\"1636\",\"start-time\":\"1748096641149415969\"}},{\"pid\":\"1637\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"1343\",\"cpu-usage-user\":\"1699\",\"cpu-utilization\":0,\"memory-usage\":\"201224192\",\"memory-utilization\":4,\"name\":\"Sysdb\",\"pid\":\"1637\",\"start-time\":\"1748096641149415969\"}},{\"pid\":\"1674\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"925696\",\"memory-utilization\":0,\"name\":\"conlogd\",\"pid\":\"1674\",\"start-time\":\"1748096646149415969\"}},{\"pid\":\"1675\",\"state\":{\"args\":[\"-c /usr/bin/LogMonUtil /var/log/eos-console | sed 's/\\\\(.*\\\\)/\\\\1\\\\r/'\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"2142208\",\"memory-utilization\":0,\"name\":\"sh\",\"pid\":\"1675\",\"start-time\":\"1748096646149415969\"}},{\"pid\":\"1676\",\"state\":{\"args\":[\"/var/log/eos-console\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"1413120\",\"memory-utilization\":0,\"name\":\"LogMonUtil\",\"pid\":\"1676\",\"start-time\":\"1748096646149415969\"}},{\"pid\":\"1677\",\"state\":{\"args\":[\"s/\\\\(.*\\\\)/\\\\1\\\\r/\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"1449984\",\"memory-utilization\":0,\"name\":\"sed\",\"pid\":\"1677\",\"start-time\":\"1748096646149415969\"}},{\"pid\":\"1696\",\"state\":{\"args\":[\"-- admin        \"],\"cpu-usage-system\":\"5\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"5242880\",\"memory-utilization\":0,\"name\":\"login\",\"pid\":\"1696\",\"start-time\":\"1748096714149415969\"}},{\"pid\":\"1758\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"101\",\"cpu-usage-user\":\"168\",\"cpu-utilization\":0,\"memory-usage\":\"53862400\",\"memory-utilization\":1,\"name\":\"Lldp\",\"pid\":\"1758\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1759\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"87\",\"cpu-usage-user\":\"92\",\"cpu-utilization\":0,\"memory-usage\":\"40505344\",\"memory-utilization\":0,\"name\":\"Tunnel\",\"pid\":\"1759\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1760\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"53\",\"cpu-usage-user\":\"79\",\"cpu-utilization\":0,\"memory-usage\":\"56172544\",\"memory-utilization\":1,\"name\":\"McastCommon6\",\"pid\":\"1760\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1761\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"153\",\"cpu-usage-user\":\"257\",\"cpu-utilization\":0,\"memory-usage\":\"38608896\",\"memory-utilization\":0,\"name\":\"Stp\",\"pid\":\"1761\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1762\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"54\",\"cpu-usage-user\":\"72\",\"cpu-utilization\":0,\"memory-usage\":\"52064256\",\"memory-utilization\":1,\"name\":\"StpTopology\",\"pid\":\"1762\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1763\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"45\",\"cpu-usage-user\":\"59\",\"cpu-utilization\":0,\"memory-usage\":\"27222016\",\"memory-utilization\":0,\"name\":\"StandbyCpld\",\"pid\":\"1763\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1764\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"113\",\"cpu-usage-user\":\"145\",\"cpu-utilization\":0,\"memory-usage\":\"56586240\",\"memory-utilization\":1,\"name\":\"Lag\",\"pid\":\"1764\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1765\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"59\",\"cpu-usage-user\":\"77\",\"cpu-utilization\":0,\"memory-usage\":\"64339968\",\"memory-utilization\":1,\"name\":\"KernelFib\",\"pid\":\"1765\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1766\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"31\",\"cpu-usage-user\":\"54\",\"cpu-utilization\":0,\"memory-usage\":\"18927616\",\"memory-utilization\":0,\"name\":\"RecoveryPolicy\",\"pid\":\"1766\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1767\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"442\",\"cpu-usage-user\":\"548\",\"cpu-utilization\":0,\"memory-usage\":\"52604928\",\"memory-utilization\":1,\"name\":\"StpTxRx\",\"pid\":\"1767\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1768\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"36\",\"cpu-usage-user\":\"74\",\"cpu-utilization\":0,\"memory-usage\":\"57651200\",\"memory-utilization\":1,\"name\":\"McastCommon\",\"pid\":\"1768\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1769\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"34\",\"cpu-usage-user\":\"74\",\"cpu-utilization\":0,\"memory-usage\":\"32727040\",\"memory-utilization\":0,\"name\":\"ReloadCauseAgen\",\"pid\":\"1769\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1770\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"74\",\"cpu-usage-user\":\"281\",\"cpu-utilization\":0,\"memory-usage\":\"54702080\",\"memory-utilization\":1,\"name\":\"Aaa\",\"pid\":\"1770\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1771\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"30\",\"cpu-usage-user\":\"51\",\"cpu-utilization\":0,\"memory-usage\":\"18710528\",\"memory-utilization\":0,\"name\":\"PowerFuse\",\"pid\":\"1771\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1772\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"120\",\"cpu-usage-user\":\"129\",\"cpu-utilization\":0,\"memory-usage\":\"90296320\",\"memory-utilization\":2,\"name\":\"ArfaAegis\",\"pid\":\"1772\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1773\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"106\",\"cpu-usage-user\":\"198\",\"cpu-utilization\":0,\"memory-usage\":\"72871936\",\"memory-utilization\":1,\"name\":\"Arp\",\"pid\":\"1773\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1774\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"43\",\"cpu-usage-user\":\"49\",\"cpu-utilization\":0,\"memory-usage\":\"30240768\",\"memory-utilization\":0,\"name\":\"Thermostat\",\"pid\":\"1774\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1775\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"91\",\"cpu-usage-user\":\"152\",\"cpu-utilization\":0,\"memory-usage\":\"50069504\",\"memory-utilization\":1,\"name\":\"LedPolicy\",\"pid\":\"1775\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1776\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"44\",\"cpu-usage-user\":\"80\",\"cpu-utilization\":0,\"memory-usage\":\"45035520\",\"memory-utilization\":1,\"name\":\"PortSec\",\"pid\":\"1776\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1777\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"31\",\"cpu-usage-user\":\"73\",\"cpu-utilization\":0,\"memory-usage\":\"45346816\",\"memory-utilization\":1,\"name\":\"IfIndex\",\"pid\":\"1777\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1779\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"75\",\"cpu-usage-user\":\"92\",\"cpu-utilization\":0,\"memory-usage\":\"61194240\",\"memory-utilization\":1,\"name\":\"Ebra\",\"pid\":\"1779\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1780\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"74\",\"cpu-usage-user\":\"92\",\"cpu-utilization\":0,\"memory-usage\":\"36130816\",\"memory-utilization\":0,\"name\":\"L2Rib\",\"pid\":\"1780\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1781\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"77\",\"cpu-usage-user\":\"82\",\"cpu-utilization\":0,\"memory-usage\":\"61022208\",\"memory-utilization\":1,\"name\":\"Bfd\",\"pid\":\"1781\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1782\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"76\",\"cpu-usage-user\":\"110\",\"cpu-utilization\":0,\"memory-usage\":\"69115904\",\"memory-utilization\":1,\"name\":\"Ira\",\"pid\":\"1782\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1783\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"75\",\"cpu-usage-user\":\"238\",\"cpu-utilization\":0,\"memory-usage\":\"54317056\",\"memory-utilization\":1,\"name\":\"Qos\",\"pid\":\"1783\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1784\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"37\",\"cpu-usage-user\":\"64\",\"cpu-utilization\":0,\"memory-usage\":\"48214016\",\"memory-utilization\":1,\"name\":\"TopoAgent\",\"pid\":\"1784\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1785\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"61\",\"cpu-usage-user\":\"96\",\"cpu-utilization\":0,\"memory-usage\":\"37478400\",\"memory-utilization\":0,\"name\":\"FibServices\",\"pid\":\"1785\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1786\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"68\",\"cpu-usage-user\":\"107\",\"cpu-utilization\":0,\"memory-usage\":\"55230464\",\"memory-utilization\":1,\"name\":\"EventMgr\",\"pid\":\"1786\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1787\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"341\",\"cpu-usage-user\":\"561\",\"cpu-utilization\":0,\"memory-usage\":\"108191744\",\"memory-utilization\":2,\"name\":\"SuperServer\",\"pid\":\"1787\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1788\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"43\",\"cpu-usage-user\":\"60\",\"cpu-utilization\":0,\"memory-usage\":\"30420992\",\"memory-utilization\":0,\"name\":\"KernelNetworkIn\",\"pid\":\"1788\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1789\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"31\",\"cpu-usage-user\":\"60\",\"cpu-utilization\":0,\"memory-usage\":\"20385792\",\"memory-utilization\":0,\"name\":\"SharedSecretPro\",\"pid\":\"1789\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1790\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"235\",\"cpu-usage-user\":\"292\",\"cpu-utilization\":0,\"memory-usage\":\"103149568\",\"memory-utilization\":2,\"name\":\"Acl\",\"pid\":\"1790\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1791\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"89\",\"cpu-usage-user\":\"133\",\"cpu-utilization\":0,\"memory-usage\":\"67907584\",\"memory-utilization\":1,\"name\":\"IgmpSnooping\",\"pid\":\"1791\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1792\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"56\",\"cpu-usage-user\":\"72\",\"cpu-utilization\":0,\"memory-usage\":\"47083520\",\"memory-utilization\":1,\"name\":\"LacpTxAgent\",\"pid\":\"1792\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1793\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"2892\",\"cpu-usage-user\":\"1678\",\"cpu-utilization\":0,\"memory-usage\":\"17244160\",\"memory-utilization\":0,\"name\":\"AgentMonitor\",\"pid\":\"1793\",\"start-time\":\"1748096912149415969\"}},{\"pid\":\"1843\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"1564\",\"cpu-usage-user\":\"1395\",\"cpu-utilization\":0,\"memory-usage\":\"49303552\",\"memory-utilization\":1,\"name\":\"PhyEthtool\",\"pid\":\"1843\",\"start-time\":\"1748096923149415969\"}},{\"pid\":\"1844\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"1271\",\"cpu-usage-user\":\"2328\",\"cpu-utilization\":0,\"memory-usage\":\"206012416\",\"memory-utilization\":5,\"name\":\"Etba\",\"pid\":\"1844\",\"start-time\":\"1748096923149415969\"}},{\"pid\":\"1903\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"53\",\"cpu-usage-user\":\"79\",\"cpu-utilization\":0,\"memory-usage\":\"72503296\",\"memory-utilization\":1,\"name\":\"RouteInput\",\"pid\":\"1903\",\"start-time\":\"1748096937149415969\"}},{\"pid\":\"1905\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"40\",\"cpu-usage-user\":\"85\",\"cpu-utilization\":0,\"memory-usage\":\"71217152\",\"memory-utilization\":1,\"name\":\"StaticRoute\",\"pid\":\"1905\",\"start-time\":\"1748096937149415969\"}},{\"pid\":\"1906\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"37\",\"cpu-usage-user\":\"75\",\"cpu-utilization\":0,\"memory-usage\":\"56455168\",\"memory-utilization\":1,\"name\":\"ConnectedRoute\",\"pid\":\"1906\",\"start-time\":\"1748096937149415969\"}},{\"pid\":\"1908\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"112\",\"cpu-usage-user\":\"150\",\"cpu-utilization\":0,\"memory-usage\":\"87347200\",\"memory-utilization\":2,\"name\":\"IpRib\",\"pid\":\"1908\",\"start-time\":\"1748096937149415969\"}},{\"pid\":\"2171\",\"state\":{\"args\":[\"                          --sysname ar --privilege 1\"],\"cpu-usage-system\":\"58\",\"cpu-usage-user\":\"27\",\"cpu-utilization\":0,\"memory-usage\":\"13832192\",\"memory-utilization\":0,\"name\":\"CliShell\",\"pid\":\"2171\",\"start-time\":\"1748096971149415969\"}},{\"pid\":\"2175\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"53\",\"cpu-usage-user\":\"108\",\"cpu-utilization\":0,\"memory-usage\":\"64032768\",\"memory-utilization\":1,\"name\":\"Dot1x\",\"pid\":\"2175\",\"start-time\":\"1748096971149415969\"}},{\"pid\":\"2176\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"49\",\"cpu-usage-user\":\"89\",\"cpu-utilization\":0,\"memory-usage\":\"54169600\",\"memory-utilization\":1,\"name\":\"RouteCache\",\"pid\":\"2176\",\"start-time\":\"1748096971149415969\"}},{\"pid\":\"2177\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"75\",\"cpu-usage-user\":\"165\",\"cpu-utilization\":0,\"memory-usage\":\"86089728\",\"memory-utilization\":2,\"name\":\"ArfaState\",\"pid\":\"2177\",\"start-time\":\"1748096971149415969\"}},{\"pid\":\"2454\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"1024\",\"cpu-usage-user\":\"78\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kworker/0:1-events_power_efficient\",\"pid\":\"2454\",\"start-time\":\"1748097287149415969\"}},{\"pid\":\"2477\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"29\",\"cpu-usage-user\":\"64\",\"cpu-utilization\":0,\"memory-usage\":\"30167040\",\"memory-utilization\":0,\"name\":\"L1OpenConfig\",\"pid\":\"2477\",\"start-time\":\"1748097317149415969\"}},{\"pid\":\"2478\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"179\",\"cpu-usage-user\":\"408\",\"cpu-utilization\":0,\"memory-usage\":\"100405248\",\"memory-utilization\":2,\"name\":\"AleOpenConfig\",\"pid\":\"2478\",\"start-time\":\"1748097317149415969\"}},{\"pid\":\"2479\",\"state\":{\"args\":[\"--agenttitle=OpenConfig\"],\"cpu-usage-system\":\"2482\",\"cpu-usage-user\":\"8034\",\"cpu-utilization\":0,\"memory-usage\":\"160837632\",\"memory-utilization\":3,\"name\":\"OpenConfig\",\"pid\":\"2479\",\"start-time\":\"1748097317149415969\"}},{\"pid\":\"2480\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"573\",\"cpu-usage-user\":\"2143\",\"cpu-utilization\":0,\"memory-usage\":\"69365760\",\"memory-utilization\":1,\"name\":\"AirStream\",\"pid\":\"2480\",\"start-time\":\"1748097317149415969\"}},{\"pid\":\"2553\",\"state\":{\"args\":[\"sudhin [priv]            \"],\"cpu-usage-system\":\"6\",\"cpu-usage-user\":\"4\",\"cpu-utilization\":0,\"memory-usage\":\"10498048\",\"memory-utilization\":0,\"name\":\"sshd\",\"pid\":\"2553\",\"start-time\":\"1748097376149415969\"}},{\"pid\":\"2563\",\"state\":{\"args\":[\"sudhin@pts/4             \"],\"cpu-usage-system\":\"19\",\"cpu-usage-user\":\"4\",\"cpu-utilization\":0,\"memory-usage\":\"5525504\",\"memory-utilization\":0,\"name\":\"sshd\",\"pid\":\"2563\",\"start-time\":\"1748097381149415969\"}},{\"pid\":\"2565\",\"state\":{\"args\":[\"                          --sysname ar --privilege 1\"],\"cpu-usage-system\":\"24\",\"cpu-usage-user\":\"49\",\"cpu-utilization\":0,\"memory-usage\":\"13783040\",\"memory-utilization\":0,\"name\":\"CliShell\",\"pid\":\"2565\",\"start-time\":\"1748097381149415969\"}},{\"pid\":\"2583\",\"state\":{\"args\":[\"-n\"],\"cpu-usage-system\":\"5\",\"cpu-usage-user\":\"5\",\"cpu-utilization\":0,\"memory-usage\":\"5373952\",\"memory-utilization\":0,\"name\":\"rsyslogd\",\"pid\":\"2583\",\"start-time\":\"1748097395149415969\"}},{\"pid\":\"2614\",\"state\":{\"args\":[\"-e SYSNAME=ar -e SYSDBSOCKNAME=sysdb -e VRFNAME=default -sf /etc/dhcp/dhclient-script.py -pf /var/run/dhclient-default.pid -cf /etc/dhcp/dhclient-default.conf -lf /var/lib/dhclient/dhclient-default.leases -e ma1=Management1\"],\"cpu-usage-system\":\"2\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"3518464\",\"memory-utilization\":0,\"name\":\"dhclient\",\"pid\":\"2614\",\"start-time\":\"1748097396149415969\"}},{\"pid\":\"4179\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"397\",\"cpu-usage-user\":\"429\",\"cpu-utilization\":0,\"memory-usage\":\"207167488\",\"memory-utilization\":5,\"name\":\"Bgp-main\",\"pid\":\"4179\",\"start-time\":\"1748105081149415969\"}},{\"pid\":\"4180\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"102\",\"cpu-usage-user\":\"134\",\"cpu-utilization\":0,\"memory-usage\":\"123801600\",\"memory-utilization\":3,\"name\":\"BgpCliHelper\",\"pid\":\"4180\",\"start-time\":\"1748105081149415969\"}},{\"pid\":\"4191\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"1\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kworker/0:0-events\",\"pid\":\"4191\",\"start-time\":\"1748105094149415969\"}},{\"pid\":\"5385\",\"state\":{\"args\":[\"\"],\"cpu-usage-system\":\"2\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"0\",\"memory-utilization\":0,\"name\":\"kworker/u80:0-flush-8:0\",\"pid\":\"5385\",\"start-time\":\"1748111365149415969\"}},{\"pid\":\"5386\",\"state\":{\"args\":[\"-e modify /var/lib/rpm\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"761856\",\"memory-utilization\":0,\"name\":\"inotifywait\",\"pid\":\"5386\",\"start-time\":\"1748111365149415969\"}},{\"pid\":\"6057\",\"state\":{\"args\":[\"60\"],\"cpu-usage-system\":\"0\",\"cpu-usage-user\":\"0\",\"cpu-utilization\":0,\"memory-usage\":\"745472\",\"memory-utilization\":0,\"name\":\"sleep\",\"pid\":\"6057\",\"start-time\":\"1748114783149415969\"}}]},\"openconfig-system:ssh-server\":{\"config\":{\"session-limit\":50,\"timeout\":0},\"state\":{\"session-limit\":50,\"timeout\":0}},\"openconfig-system:state\":{\"boot-time\":\"1748096481149415969\",\"current-datetime\":\"2025-05-24T19:26:16Z\",\"hostname\":\"Arista-New\",\"last-configuration-timestamp\":\"1748111316023720026\",\"software-version\":\"4.32.1F\"}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:messages\":{\"config\":{\"severity\":\"DEBUG\"}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:messages\":{\"state\":{\"severity\":\"DEBUG\"}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"admin-user\":{\"state\":{\"gnsi-credentialz:password-version\":\"\"}}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"admin-user\":{\"state\":{\"gnsi-credentialz:password-created-on\":\"0\"}}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"admin-user\":{\"state\":{\"gnsi-credentialz:authorized-principals-list-version\":\"\"}}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"admin-user\":{\"state\":{\"gnsi-credentialz:authorized-principals-list-created-on\":\"0\"}}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"admin-user\":{\"state\":{\"gnsi-credentialz:authorized-keys-list-version\":\"\"}}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"admin-user\":{\"state\":{\"gnsi-credentialz:authorized-keys-list-created-on\":\"0\"}}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:ssh-server\":{\"state\":{\"gnsi-credentialz:active-trusted-user-ca-keys-version\":\"\"}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:ssh-server\":{\"state\":{\"gnsi-credentialz:active-trusted-user-ca-keys-created-on\":\"0\"}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:ssh-server\":{\"state\":{\"gnsi-credentialz:active-host-certificate-version\":\"\"}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:ssh-server\":{\"state\":{\"gnsi-credentialz:active-host-certificate-created-on\":\"0\"}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:ssh-server\":{\"state\":{\"gnsi-credentialz:active-host-key-version\":\"\"}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:ssh-server\":{\"state\":{\"gnsi-credentialz:active-host-key-created-on\":\"0\"}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:ssh-server\":{\"state\":{\"gnsi-credentialz:counters\":{\"access-rejects\":\"0\"}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:ssh-server\":{\"state\":{\"gnsi-credentialz:counters\":{\"last-access-reject\":\"0\"}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:ssh-server\":{\"state\":{\"gnsi-credentialz:counters\":{\"access-accepts\":\"1\"}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:ssh-server\":{\"state\":{\"gnsi-credentialz:counters\":{\"last-access-accept\":\"1748097331186145024\"}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"gnsi-credentialz:console\":{\"state\":{\"counters\":{\"access-rejects\":\"0\"}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"gnsi-credentialz:console\":{\"state\":{\"counters\":{\"last-access-reject\":\"0\"}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"gnsi-credentialz:console\":{\"state\":{\"counters\":{\"access-accepts\":\"1\"}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"gnsi-credentialz:console\":{\"state\":{\"counters\":{\"last-access-accept\":\"1748096920627646976\"}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"users\":{\"user\":[{\"username\":\"sudhin\",\"state\":{\"gnsi-credentialz:password-version\":\"\"}}]}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"users\":{\"user\":[{\"username\":\"sudhin\",\"state\":{\"gnsi-credentialz:password-created-on\":\"0\"}}]}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"users\":{\"user\":[{\"username\":\"sudhin\",\"state\":{\"gnsi-credentialz:authorized-principals-list-version\":\"\"}}]}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"users\":{\"user\":[{\"username\":\"sudhin\",\"state\":{\"gnsi-credentialz:authorized-principals-list-created-on\":\"0\"}}]}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"users\":{\"user\":[{\"username\":\"sudhin\",\"state\":{\"gnsi-credentialz:authorized-keys-list-version\":\"\"}}]}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"users\":{\"user\":[{\"username\":\"sudhin\",\"state\":{\"gnsi-credentialz:authorized-keys-list-created-on\":\"0\"}}]}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"users\":{\"user\":[{\"username\":\"admin\",\"state\":{\"gnsi-credentialz:password-version\":\"\"}}]}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"users\":{\"user\":[{\"username\":\"admin\",\"state\":{\"gnsi-credentialz:password-created-on\":\"0\"}}]}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"users\":{\"user\":[{\"username\":\"admin\",\"state\":{\"gnsi-credentialz:authorized-principals-list-version\":\"\"}}]}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"users\":{\"user\":[{\"username\":\"admin\",\"state\":{\"gnsi-credentialz:authorized-principals-list-created-on\":\"0\"}}]}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"users\":{\"user\":[{\"username\":\"admin\",\"state\":{\"gnsi-credentialz:authorized-keys-list-version\":\"\"}}]}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system:aaa\":{\"authentication\":{\"users\":{\"user\":[{\"username\":\"admin\",\"state\":{\"gnsi-credentialz:authorized-keys-list-created-on\":\"0\"}}]}}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"arista-system-session:session\":{\"config\":{\"max-history-size\":20}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"arista-system-session:session\":{\"config\":{\"enable-config-terminal\":true}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"arista-system-session:session\":{\"config\":{\"enable-diff\":false}}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"defualt\",\"state\":{\"gnsi-certz:certificate-version\":\"\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"defualt\",\"state\":{\"gnsi-certz:certificate-created-on\":\"0\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"defualt\",\"state\":{\"gnsi-certz:ca-trust-bundle-version\":\"\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"defualt\",\"state\":{\"gnsi-certz:ca-trust-bundle-created-on\":\"0\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"defualt\",\"state\":{\"gnsi-certz:certificate-revocation-list-bundle-version\":\"\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"defualt\",\"state\":{\"gnsi-certz:certificate-revocation-list-bundle-created-on\":\"0\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"defualt\",\"state\":{\"gnsi-certz:authentication-policy-version\":\"\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"defualt\",\"state\":{\"gnsi-certz:authentication-policy-created-on\":\"0\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"defualt\",\"state\":{\"gnsi-certz:ssl-profile-id\":\"\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"defualt\",\"state\":{\"gnsi-certz:counters\":{\"connection-rejects\":\"0\"}}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"defualt\",\"state\":{\"gnsi-certz:counters\":{\"last-connection-reject\":\"0\"}}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"defualt\",\"state\":{\"gnsi-certz:counters\":{\"connection-accepts\":\"0\"}}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"defualt\",\"state\":{\"gnsi-certz:counters\":{\"last-connection-accept\":\"0\"}}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"default\",\"state\":{\"gnsi-certz:certificate-version\":\"\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"default\",\"state\":{\"gnsi-certz:certificate-created-on\":\"0\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"default\",\"state\":{\"gnsi-certz:ca-trust-bundle-version\":\"\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"default\",\"state\":{\"gnsi-certz:ca-trust-bundle-created-on\":\"0\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"default\",\"state\":{\"gnsi-certz:certificate-revocation-list-bundle-version\":\"\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"default\",\"state\":{\"gnsi-certz:certificate-revocation-list-bundle-created-on\":\"0\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"default\",\"state\":{\"gnsi-certz:authentication-policy-version\":\"\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"default\",\"state\":{\"gnsi-certz:authentication-policy-created-on\":\"0\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"default\",\"state\":{\"gnsi-certz:ssl-profile-id\":\"\"}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"default\",\"state\":{\"gnsi-certz:counters\":{\"connection-rejects\":\"0\"}}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"default\",\"state\":{\"gnsi-certz:counters\":{\"last-connection-reject\":\"0\"}}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"default\",\"state\":{\"gnsi-certz:counters\":{\"connection-accepts\":\"51\"}}}]}}"
+
+Path: elem:{name:"system"}
+Value: json_ietf_val:"{\"openconfig-system-grpc:grpc-servers\":{\"grpc-server\":[{\"name\":\"default\",\"state\":{\"gnsi-certz:counters\":{\"last-connection-accept\":\"1748114780448164939\"}}}]}}"
+

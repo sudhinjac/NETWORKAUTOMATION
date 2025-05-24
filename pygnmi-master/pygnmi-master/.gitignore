@@ -1,0 +1,14 @@
+**/__pycache__/
+**/*.pem
+venv/
+log/
+.temp/
+.vscode/
+**/.env
+**/.pytest_cache/
+**/.coverage
+**/coverage.json
+**/htmlcov/
+dist/
+pygnmi_dev.py
+pcl

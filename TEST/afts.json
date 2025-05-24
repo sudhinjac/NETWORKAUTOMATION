@@ -1,0 +1,687 @@
+[
+  {
+    "source": "192.168.255.138:6030",
+    "timestamp": 1748107773117971723,
+    "time": "2025-05-24T17:29:33.117971723Z",
+    "updates": [
+      {
+        "Path": "network-instances/network-instance[name=default]",
+        "values": {
+          "network-instances/network-instance": {
+            "openconfig-network-instance:config": {
+              "arista-netinst-augments:ipv6-routing-enabled": false,
+              "name": "default",
+              "type": "openconfig-network-instance-types:DEFAULT_INSTANCE"
+            },
+            "openconfig-network-instance:mpls": {
+              "global": {
+                "reserved-label-blocks": {
+                  "reserved-label-block": [
+                    {
+                      "config": {
+                        "local-id": "bgp-sr",
+                        "lower-bound": 900000,
+                        "upper-bound": 965535
+                      },
+                      "local-id": "bgp-sr"
+                    },
+                    {
+                      "config": {
+                        "local-id": "dynamic",
+                        "lower-bound": 100000,
+                        "upper-bound": 362143
+                      },
+                      "local-id": "dynamic"
+                    },
+                    {
+                      "config": {
+                        "local-id": "isis-sr",
+                        "lower-bound": 900000,
+                        "upper-bound": 965535
+                      },
+                      "local-id": "isis-sr"
+                    },
+                    {
+                      "config": {
+                        "local-id": "l2evpn",
+                        "lower-bound": 1036288,
+                        "upper-bound": 1048575
+                      },
+                      "local-id": "l2evpn"
+                    },
+                    {
+                      "config": {
+                        "local-id": "l2evpnSharedEs",
+                        "lower-bound": 1031072,
+                        "upper-bound": 1032095
+                      },
+                      "local-id": "l2evpnSharedEs"
+                    },
+                    {
+                      "config": {
+                        "local-id": "ospf-sr",
+                        "lower-bound": 900000,
+                        "upper-bound": 965535
+                      },
+                      "local-id": "ospf-sr"
+                    },
+                    {
+                      "config": {
+                        "local-id": "srlb",
+                        "lower-bound": 965536,
+                        "upper-bound": 1031071
+                      },
+                      "local-id": "srlb"
+                    },
+                    {
+                      "config": {
+                        "local-id": "static",
+                        "lower-bound": 16,
+                        "upper-bound": 99999
+                      },
+                      "local-id": "static"
+                    }
+                  ]
+                }
+              },
+              "signaling-protocols": {
+                "rsvp-te": {
+                  "global": {
+                    "hellos": {
+                      "config": {
+                        "hello-interval": 10000
+                      },
+                      "state": {
+                        "hello-interval": 0,
+                        "refresh-reduction": false
+                      }
+                    },
+                    "soft-preemption": {
+                      "config": {
+                        "enable": true
+                      },
+                      "state": {
+                        "enable": true
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "openconfig-network-instance:name": "default",
+            "openconfig-network-instance:protocols": {
+              "protocol": [
+                {
+                  "config": {
+                    "identifier": "openconfig-policy-types:DIRECTLY_CONNECTED",
+                    "name": "DIRECTLY_CONNECTED"
+                  },
+                  "identifier": "openconfig-policy-types:DIRECTLY_CONNECTED",
+                  "name": "DIRECTLY_CONNECTED"
+                },
+                {
+                  "bgp": {
+                    "global": {
+                      "config": {
+                        "as": 200
+                      },
+                      "state": {
+                        "as": 200,
+                        "router-id": "192.168.1.1"
+                      }
+                    },
+                    "neighbors": {
+                      "neighbor": [
+                        {
+                          "afi-safis": {
+                            "afi-safi": [
+                              {
+                                "afi-safi-name": "arista-bgp-augments:IPV4_MULTICAST",
+                                "config": {
+                                  "afi-safi-name": "arista-bgp-augments:IPV4_MULTICAST"
+                                },
+                                "state": {
+                                  "active": false,
+                                  "afi-safi-name": "arista-bgp-augments:IPV4_MULTICAST"
+                                }
+                              },
+                              {
+                                "afi-safi-name": "arista-bgp-augments:IPV6_MULTICAST",
+                                "config": {
+                                  "afi-safi-name": "arista-bgp-augments:IPV6_MULTICAST"
+                                },
+                                "state": {
+                                  "active": false,
+                                  "afi-safi-name": "arista-bgp-augments:IPV6_MULTICAST"
+                                }
+                              },
+                              {
+                                "afi-safi-name": "openconfig-bgp-types:IPV4_UNICAST",
+                                "config": {
+                                  "afi-safi-name": "openconfig-bgp-types:IPV4_UNICAST"
+                                },
+                                "graceful-restart": {
+                                  "state": {
+                                    "advertised": false,
+                                    "received": false
+                                  }
+                                },
+                                "ipv4-unicast": {
+                                  "prefix-limit": {
+                                    "state": {
+                                      "prefix-limit-exceeded": false
+                                    }
+                                  },
+                                  "prefix-limit-received": {
+                                    "state": {
+                                      "prefix-limit-exceeded": false
+                                    }
+                                  }
+                                },
+                                "state": {
+                                  "active": true,
+                                  "afi-safi-name": "openconfig-bgp-types:IPV4_UNICAST",
+                                  "prefixes": {
+                                    "arista-bgp-augments:best-ecmp-paths": 0,
+                                    "arista-bgp-augments:best-paths": 0,
+                                    "installed": 0,
+                                    "received": 0,
+                                    "received-pre-policy": 0,
+                                    "sent": 0
+                                  }
+                                }
+                              },
+                              {
+                                "afi-safi-name": "openconfig-bgp-types:IPV6_UNICAST",
+                                "config": {
+                                  "afi-safi-name": "openconfig-bgp-types:IPV6_UNICAST"
+                                },
+                                "graceful-restart": {
+                                  "state": {
+                                    "advertised": false,
+                                    "received": false
+                                  }
+                                },
+                                "ipv6-unicast": {
+                                  "prefix-limit": {
+                                    "state": {
+                                      "prefix-limit-exceeded": false
+                                    }
+                                  },
+                                  "prefix-limit-received": {
+                                    "state": {
+                                      "prefix-limit-exceeded": false
+                                    }
+                                  }
+                                },
+                                "state": {
+                                  "active": false,
+                                  "afi-safi-name": "openconfig-bgp-types:IPV6_UNICAST",
+                                  "prefixes": {
+                                    "arista-bgp-augments:best-ecmp-paths": 0,
+                                    "arista-bgp-augments:best-paths": 0,
+                                    "installed": 0,
+                                    "received": 0,
+                                    "received-pre-policy": 0,
+                                    "sent": 0
+                                  }
+                                }
+                              },
+                              {
+                                "afi-safi-name": "openconfig-bgp-types:L2VPN_EVPN",
+                                "config": {
+                                  "afi-safi-name": "openconfig-bgp-types:L2VPN_EVPN"
+                                },
+                                "graceful-restart": {
+                                  "state": {
+                                    "advertised": false,
+                                    "received": false
+                                  }
+                                },
+                                "state": {
+                                  "active": false,
+                                  "afi-safi-name": "openconfig-bgp-types:L2VPN_EVPN",
+                                  "prefixes": {
+                                    "arista-bgp-augments:best-ecmp-paths": 0,
+                                    "arista-bgp-augments:best-paths": 0,
+                                    "installed": 0,
+                                    "received": 0,
+                                    "received-pre-policy": 0,
+                                    "sent": 0
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          "config": {
+                            "neighbor-address": "192.168.1.2",
+                            "peer-as": 100
+                          },
+                          "ebgp-multihop": {
+                            "config": {
+                              "multihop-ttl": 0
+                            },
+                            "state": {
+                              "multihop-ttl": 0
+                            }
+                          },
+                          "graceful-restart": {
+                            "state": {
+                              "peer-restart-time": 300
+                            }
+                          },
+                          "neighbor-address": "192.168.1.2",
+                          "state": {
+                            "established-transitions": "1",
+                            "last-established": "1748105048869192838",
+                            "last-prefix-limit-exceeded": "0",
+                            "messages": {
+                              "received": {
+                                "NOTIFICATION": "0",
+                                "UPDATE": "1"
+                              },
+                              "sent": {
+                                "NOTIFICATION": "0",
+                                "UPDATE": "1"
+                              }
+                            },
+                            "neighbor-address": "192.168.1.2",
+                            "peer-as": 100,
+                            "peer-type": "EXTERNAL",
+                            "queues": {
+                              "input": 0,
+                              "output": 0
+                            },
+                            "session-state": "ESTABLISHED",
+                            "supported-capabilities": [
+                              "openconfig-bgp-types:GRACEFUL_RESTART",
+                              "openconfig-bgp-types:ADD_PATHS",
+                              "openconfig-bgp-types:MPBGP",
+                              "openconfig-bgp-types:ROUTE_REFRESH",
+                              "openconfig-bgp-types:ASN32"
+                            ]
+                          },
+                          "timers": {
+                            "state": {
+                              "negotiated-hold-time": 180
+                            }
+                          },
+                          "transport": {
+                            "state": {
+                              "local-port": 38427,
+                              "remote-address": "192.168.1.2",
+                              "remote-port": 179
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "config": {
+                    "identifier": "openconfig-policy-types:BGP",
+                    "name": "BGP"
+                  },
+                  "identifier": "openconfig-policy-types:BGP",
+                  "name": "BGP"
+                }
+              ]
+            },
+            "openconfig-network-instance:segment-routing": {
+              "srgbs": {
+                "srgb": [
+                  {
+                    "config": {
+                      "dataplane-type": "MPLS",
+                      "local-id": "isis-sr",
+                      "mpls-label-blocks": [
+                        "isis-sr"
+                      ]
+                    },
+                    "local-id": "isis-sr"
+                  }
+                ]
+              },
+              "srlbs": {
+                "srlb": [
+                  {
+                    "config": {
+                      "dataplane-type": "MPLS",
+                      "local-id": "srlb",
+                      "mpls-label-block": "srlb"
+                    },
+                    "local-id": "srlb"
+                  }
+                ]
+              }
+            },
+            "openconfig-network-instance:tables": {
+              "table": [
+                {
+                  "address-family": "openconfig-types:IPV4",
+                  "config": {
+                    "address-family": "openconfig-types:IPV4",
+                    "protocol": "openconfig-policy-types:DIRECTLY_CONNECTED"
+                  },
+                  "protocol": "openconfig-policy-types:DIRECTLY_CONNECTED"
+                },
+                {
+                  "address-family": "openconfig-types:IPV6",
+                  "config": {
+                    "address-family": "openconfig-types:IPV6",
+                    "protocol": "openconfig-policy-types:DIRECTLY_CONNECTED"
+                  },
+                  "protocol": "openconfig-policy-types:DIRECTLY_CONNECTED"
+                },
+                {
+                  "address-family": "openconfig-types:IPV4",
+                  "config": {
+                    "address-family": "openconfig-types:IPV4",
+                    "protocol": "openconfig-policy-types:BGP"
+                  },
+                  "protocol": "openconfig-policy-types:BGP"
+                },
+                {
+                  "address-family": "openconfig-types:IPV6",
+                  "config": {
+                    "address-family": "openconfig-types:IPV6",
+                    "protocol": "openconfig-policy-types:BGP"
+                  },
+                  "protocol": "openconfig-policy-types:BGP"
+                }
+              ]
+            },
+            "openconfig-network-instance:vlans": {
+              "vlan": [
+                {
+                  "config": {
+                    "name": "default",
+                    "vlan-id": 1
+                  },
+                  "members": {
+                    "member": [
+                      {
+                        "state": {
+                          "interface": "Ethernet2"
+                        }
+                      },
+                      {
+                        "state": {
+                          "interface": "Ethernet3"
+                        }
+                      }
+                    ]
+                  },
+                  "state": {
+                    "name": "default",
+                    "vlan-id": 1
+                  },
+                  "vlan-id": 1
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "Path": "network-instances/network-instance[name=default]",
+        "values": {
+          "network-instances/network-instance": {
+            "openconfig-network-instance:fdb": {
+              "mac-table": {
+                "entries": {
+                  "entry": [
+                    {
+                      "mac-address": "00:0c:29:4b:d9:5c",
+                      "vlan": 1006
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Path": "network-instances/network-instance[name=default]",
+        "values": {
+          "network-instances/network-instance": {
+            "openconfig-network-instance:fdb": {
+              "mac-table": {
+                "entries": {
+                  "entry": [
+                    {
+                      "mac-address": "00:0c:29:4b:d9:5c",
+                      "vlan": 1006
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Path": "network-instances/network-instance[name=default]",
+        "values": {
+          "network-instances/network-instance": {
+            "openconfig-network-instance:fdb": {
+              "mac-table": {
+                "entries": {
+                  "entry": [
+                    {
+                      "mac-address": "00:0c:29:4b:d9:5c",
+                      "state": {
+                        "mac-address": "00:0c:29:4b:d9:5c"
+                      },
+                      "vlan": 1006
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Path": "network-instances/network-instance[name=default]",
+        "values": {
+          "network-instances/network-instance": {
+            "openconfig-network-instance:fdb": {
+              "mac-table": {
+                "entries": {
+                  "entry": [
+                    {
+                      "mac-address": "00:0c:29:4b:d9:5c",
+                      "state": {
+                        "vlan": 1006
+                      },
+                      "vlan": 1006
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Path": "network-instances/network-instance[name=default]",
+        "values": {
+          "network-instances/network-instance": {
+            "openconfig-network-instance:fdb": {
+              "mac-table": {
+                "entries": {
+                  "entry": [
+                    {
+                      "mac-address": "00:0c:29:4b:d9:5c",
+                      "state": {
+                        "entry-type": "DYNAMIC"
+                      },
+                      "vlan": 1006
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Path": "network-instances/network-instance[name=default]",
+        "values": {
+          "network-instances/network-instance": {
+            "openconfig-network-instance:fdb": {
+              "mac-table": {
+                "entries": {
+                  "entry": [
+                    {
+                      "interface": {
+                        "interface-ref": {
+                          "state": {
+                            "interface": "Ethernet1"
+                          }
+                        }
+                      },
+                      "mac-address": "00:0c:29:4b:d9:5c",
+                      "vlan": 1006
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Path": "network-instances/network-instance[name=default]",
+        "values": {
+          "network-instances/network-instance": {
+            "openconfig-network-instance:fdb": {
+              "mac-table": {
+                "entries": {
+                  "entry": [
+                    {
+                      "mac-address": "00:0c:29:8b:d1:b2",
+                      "vlan": 1006
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Path": "network-instances/network-instance[name=default]",
+        "values": {
+          "network-instances/network-instance": {
+            "openconfig-network-instance:fdb": {
+              "mac-table": {
+                "entries": {
+                  "entry": [
+                    {
+                      "mac-address": "00:0c:29:8b:d1:b2",
+                      "vlan": 1006
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Path": "network-instances/network-instance[name=default]",
+        "values": {
+          "network-instances/network-instance": {
+            "openconfig-network-instance:fdb": {
+              "mac-table": {
+                "entries": {
+                  "entry": [
+                    {
+                      "mac-address": "00:0c:29:8b:d1:b2",
+                      "state": {
+                        "mac-address": "00:0c:29:8b:d1:b2"
+                      },
+                      "vlan": 1006
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Path": "network-instances/network-instance[name=default]",
+        "values": {
+          "network-instances/network-instance": {
+            "openconfig-network-instance:fdb": {
+              "mac-table": {
+                "entries": {
+                  "entry": [
+                    {
+                      "mac-address": "00:0c:29:8b:d1:b2",
+                      "state": {
+                        "vlan": 1006
+                      },
+                      "vlan": 1006
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Path": "network-instances/network-instance[name=default]",
+        "values": {
+          "network-instances/network-instance": {
+            "openconfig-network-instance:fdb": {
+              "mac-table": {
+                "entries": {
+                  "entry": [
+                    {
+                      "mac-address": "00:0c:29:8b:d1:b2",
+                      "state": {
+                        "entry-type": "DYNAMIC"
+                      },
+                      "vlan": 1006
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Path": "network-instances/network-instance[name=default]",
+        "values": {
+          "network-instances/network-instance": {
+            "openconfig-network-instance:fdb": {
+              "mac-table": {
+                "entries": {
+                  "entry": [
+                    {
+                      "interface": {
+                        "interface-ref": {
+                          "state": {
+                            "interface": "Ethernet1"
+                          }
+                        }
+                      },
+                      "mac-address": "00:0c:29:8b:d1:b2",
+                      "vlan": 1006
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+]

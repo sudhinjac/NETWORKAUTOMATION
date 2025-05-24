@@ -1,0 +1,231 @@
+[
+  {
+    "source": "192.168.255.138:6030",
+    "timestamp": 1748107849892450672,
+    "time": "2025-05-24T17:30:49.892450672Z",
+    "updates": [
+      {
+        "Path": "network-instances/network-instance[name=default]/protocols",
+        "values": {
+          "network-instances/network-instance/protocols": {
+            "openconfig-network-instance:protocol": [
+              {
+                "config": {
+                  "identifier": "openconfig-policy-types:DIRECTLY_CONNECTED",
+                  "name": "DIRECTLY_CONNECTED"
+                },
+                "identifier": "openconfig-policy-types:DIRECTLY_CONNECTED",
+                "name": "DIRECTLY_CONNECTED"
+              },
+              {
+                "bgp": {
+                  "global": {
+                    "config": {
+                      "as": 200
+                    },
+                    "state": {
+                      "as": 200,
+                      "router-id": "192.168.1.1"
+                    }
+                  },
+                  "neighbors": {
+                    "neighbor": [
+                      {
+                        "afi-safis": {
+                          "afi-safi": [
+                            {
+                              "afi-safi-name": "arista-bgp-augments:IPV4_MULTICAST",
+                              "config": {
+                                "afi-safi-name": "arista-bgp-augments:IPV4_MULTICAST"
+                              },
+                              "state": {
+                                "active": false,
+                                "afi-safi-name": "arista-bgp-augments:IPV4_MULTICAST"
+                              }
+                            },
+                            {
+                              "afi-safi-name": "arista-bgp-augments:IPV6_MULTICAST",
+                              "config": {
+                                "afi-safi-name": "arista-bgp-augments:IPV6_MULTICAST"
+                              },
+                              "state": {
+                                "active": false,
+                                "afi-safi-name": "arista-bgp-augments:IPV6_MULTICAST"
+                              }
+                            },
+                            {
+                              "afi-safi-name": "openconfig-bgp-types:IPV4_UNICAST",
+                              "config": {
+                                "afi-safi-name": "openconfig-bgp-types:IPV4_UNICAST"
+                              },
+                              "graceful-restart": {
+                                "state": {
+                                  "advertised": false,
+                                  "received": false
+                                }
+                              },
+                              "ipv4-unicast": {
+                                "prefix-limit": {
+                                  "state": {
+                                    "prefix-limit-exceeded": false
+                                  }
+                                },
+                                "prefix-limit-received": {
+                                  "state": {
+                                    "prefix-limit-exceeded": false
+                                  }
+                                }
+                              },
+                              "state": {
+                                "active": true,
+                                "afi-safi-name": "openconfig-bgp-types:IPV4_UNICAST",
+                                "prefixes": {
+                                  "arista-bgp-augments:best-ecmp-paths": 0,
+                                  "arista-bgp-augments:best-paths": 0,
+                                  "installed": 0,
+                                  "received": 0,
+                                  "received-pre-policy": 0,
+                                  "sent": 0
+                                }
+                              }
+                            },
+                            {
+                              "afi-safi-name": "openconfig-bgp-types:IPV6_UNICAST",
+                              "config": {
+                                "afi-safi-name": "openconfig-bgp-types:IPV6_UNICAST"
+                              },
+                              "graceful-restart": {
+                                "state": {
+                                  "advertised": false,
+                                  "received": false
+                                }
+                              },
+                              "ipv6-unicast": {
+                                "prefix-limit": {
+                                  "state": {
+                                    "prefix-limit-exceeded": false
+                                  }
+                                },
+                                "prefix-limit-received": {
+                                  "state": {
+                                    "prefix-limit-exceeded": false
+                                  }
+                                }
+                              },
+                              "state": {
+                                "active": false,
+                                "afi-safi-name": "openconfig-bgp-types:IPV6_UNICAST",
+                                "prefixes": {
+                                  "arista-bgp-augments:best-ecmp-paths": 0,
+                                  "arista-bgp-augments:best-paths": 0,
+                                  "installed": 0,
+                                  "received": 0,
+                                  "received-pre-policy": 0,
+                                  "sent": 0
+                                }
+                              }
+                            },
+                            {
+                              "afi-safi-name": "openconfig-bgp-types:L2VPN_EVPN",
+                              "config": {
+                                "afi-safi-name": "openconfig-bgp-types:L2VPN_EVPN"
+                              },
+                              "graceful-restart": {
+                                "state": {
+                                  "advertised": false,
+                                  "received": false
+                                }
+                              },
+                              "state": {
+                                "active": false,
+                                "afi-safi-name": "openconfig-bgp-types:L2VPN_EVPN",
+                                "prefixes": {
+                                  "arista-bgp-augments:best-ecmp-paths": 0,
+                                  "arista-bgp-augments:best-paths": 0,
+                                  "installed": 0,
+                                  "received": 0,
+                                  "received-pre-policy": 0,
+                                  "sent": 0
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "config": {
+                          "neighbor-address": "192.168.1.2",
+                          "peer-as": 100
+                        },
+                        "ebgp-multihop": {
+                          "config": {
+                            "multihop-ttl": 0
+                          },
+                          "state": {
+                            "multihop-ttl": 0
+                          }
+                        },
+                        "graceful-restart": {
+                          "state": {
+                            "peer-restart-time": 300
+                          }
+                        },
+                        "neighbor-address": "192.168.1.2",
+                        "state": {
+                          "established-transitions": "1",
+                          "last-established": "1748105048869192838",
+                          "last-prefix-limit-exceeded": "0",
+                          "messages": {
+                            "received": {
+                              "NOTIFICATION": "0",
+                              "UPDATE": "1"
+                            },
+                            "sent": {
+                              "NOTIFICATION": "0",
+                              "UPDATE": "1"
+                            }
+                          },
+                          "neighbor-address": "192.168.1.2",
+                          "peer-as": 100,
+                          "peer-type": "EXTERNAL",
+                          "queues": {
+                            "input": 0,
+                            "output": 0
+                          },
+                          "session-state": "ESTABLISHED",
+                          "supported-capabilities": [
+                            "openconfig-bgp-types:GRACEFUL_RESTART",
+                            "openconfig-bgp-types:ADD_PATHS",
+                            "openconfig-bgp-types:MPBGP",
+                            "openconfig-bgp-types:ROUTE_REFRESH",
+                            "openconfig-bgp-types:ASN32"
+                          ]
+                        },
+                        "timers": {
+                          "state": {
+                            "negotiated-hold-time": 180
+                          }
+                        },
+                        "transport": {
+                          "state": {
+                            "local-port": 38427,
+                            "remote-address": "192.168.1.2",
+                            "remote-port": 179
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                "config": {
+                  "identifier": "openconfig-policy-types:BGP",
+                  "name": "BGP"
+                },
+                "identifier": "openconfig-policy-types:BGP",
+                "name": "BGP"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+]
