@@ -4,8 +4,10 @@ go 1.24.3
 
 require (
 	bitbucket.org/creachadair/stringset v0.0.14 // indirect
+	github.com/aristanetworks/gnmi v0.0.0-20211006142251-33825f207a3b // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
 	github.com/golang/glog v1.2.4 // indirect
+	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/kylelemons/godebug v1.1.0 // indirect
 	github.com/mitchellh/go-wordwrap v1.0.1 // indirect
