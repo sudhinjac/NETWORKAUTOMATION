@@ -1,0 +1,96 @@
+{
+  "path": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.2"
+        }
+      },
+      {
+        "name": "state"
+      },
+      {
+        "name": "session-state"
+      }
+    ]
+  },
+  "val": {
+    "Value": {
+      "StringVal": "ACTIVE"
+    }
+  }
+}
+{
+  "path": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.4"
+        }
+      },
+      {
+        "name": "state"
+      },
+      {
+        "name": "session-state"
+      }
+    ]
+  },
+  "val": {
+    "Value": {
+      "StringVal": "ACTIVE"
+    }
+  }
+}
