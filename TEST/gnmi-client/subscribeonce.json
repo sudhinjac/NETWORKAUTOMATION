@@ -1,0 +1,5762 @@
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "L2VPN_EVPN"
+            }
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:L2VPN_EVPN"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "L2VPN_EVPN"
+            }
+          },
+          {
+            "name": "config"
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:L2VPN_EVPN"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854811790,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.4"
+        }
+      },
+      {
+        "name": "afi-safis"
+      },
+      {
+        "name": "afi-safi",
+        "key": {
+          "afi-safi-name": "L2VPN_EVPN"
+        }
+      },
+      {
+        "name": "graceful-restart"
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "advertised"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "received"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854811790,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "L2VPN_EVPN"
+            }
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "active"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.4"
+        }
+      },
+      {
+        "name": "afi-safis"
+      },
+      {
+        "name": "afi-safi",
+        "key": {
+          "afi-safi-name": "L2VPN_EVPN"
+        }
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:L2VPN_EVPN"
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "best-ecmp-paths"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "best-paths"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "installed"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "received"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "received-pre-policy"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "sent"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_UNICAST"
+            }
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:IPV4_UNICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_UNICAST"
+            }
+          },
+          {
+            "name": "config"
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:IPV4_UNICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854811790,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.4"
+        }
+      },
+      {
+        "name": "afi-safis"
+      },
+      {
+        "name": "afi-safi",
+        "key": {
+          "afi-safi-name": "IPV4_UNICAST"
+        }
+      },
+      {
+        "name": "graceful-restart"
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "advertised"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "received"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854811790,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_UNICAST"
+            }
+          },
+          {
+            "name": "ipv4-unicast"
+          },
+          {
+            "name": "prefix-limit"
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "prefix-limit-exceeded"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854811790,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_UNICAST"
+            }
+          },
+          {
+            "name": "ipv4-unicast"
+          },
+          {
+            "name": "prefix-limit-received"
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "prefix-limit-exceeded"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854811790,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_UNICAST"
+            }
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "active"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.4"
+        }
+      },
+      {
+        "name": "afi-safis"
+      },
+      {
+        "name": "afi-safi",
+        "key": {
+          "afi-safi-name": "IPV4_UNICAST"
+        }
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:IPV4_UNICAST"
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "best-ecmp-paths"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "best-paths"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "installed"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "received"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "received-pre-policy"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "sent"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_UNICAST"
+            }
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:IPV6_UNICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_UNICAST"
+            }
+          },
+          {
+            "name": "config"
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:IPV6_UNICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854811790,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.4"
+        }
+      },
+      {
+        "name": "afi-safis"
+      },
+      {
+        "name": "afi-safi",
+        "key": {
+          "afi-safi-name": "IPV6_UNICAST"
+        }
+      },
+      {
+        "name": "graceful-restart"
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "advertised"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "received"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854811790,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_UNICAST"
+            }
+          },
+          {
+            "name": "ipv6-unicast"
+          },
+          {
+            "name": "prefix-limit"
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "prefix-limit-exceeded"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854811790,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_UNICAST"
+            }
+          },
+          {
+            "name": "ipv6-unicast"
+          },
+          {
+            "name": "prefix-limit-received"
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "prefix-limit-exceeded"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854811790,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_UNICAST"
+            }
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "active"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.4"
+        }
+      },
+      {
+        "name": "afi-safis"
+      },
+      {
+        "name": "afi-safi",
+        "key": {
+          "afi-safi-name": "IPV6_UNICAST"
+        }
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:IPV6_UNICAST"
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "best-ecmp-paths"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "best-paths"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "installed"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "received"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "received-pre-policy"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "sent"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107718572305,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_MULTICAST"
+            }
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "arista-bgp-augments:IPV4_MULTICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107718572305,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_MULTICAST"
+            }
+          },
+          {
+            "name": "config"
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "arista-bgp-augments:IPV4_MULTICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854811790,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_MULTICAST"
+            }
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "active"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107718572305,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_MULTICAST"
+            }
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "arista-bgp-augments:IPV4_MULTICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107718572305,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_MULTICAST"
+            }
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "arista-bgp-augments:IPV6_MULTICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107718572305,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_MULTICAST"
+            }
+          },
+          {
+            "name": "config"
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "arista-bgp-augments:IPV6_MULTICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854811790,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_MULTICAST"
+            }
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "active"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107718572305,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_MULTICAST"
+            }
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "arista-bgp-augments:IPV6_MULTICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "config"
+          },
+          {
+            "name": "neighbor-address"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "192.168.1.4"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107676664767,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "config"
+          },
+          {
+            "name": "peer-as"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 300
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107676664767,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "ebgp-multihop"
+          },
+          {
+            "name": "config"
+          },
+          {
+            "name": "multihop-ttl"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107676664767,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "ebgp-multihop"
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "multihop-ttl"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "neighbor-address"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "192.168.1.4"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854811790,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.4"
+        }
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "established-transitions"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "last-established"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 1749384104278392076
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "last-prefix-limit-exceeded"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.4"
+        }
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "messages"
+          },
+          {
+            "name": "received"
+          },
+          {
+            "name": "NOTIFICATION"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "messages"
+          },
+          {
+            "name": "received"
+          },
+          {
+            "name": "UPDATE"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "messages"
+          },
+          {
+            "name": "sent"
+          },
+          {
+            "name": "NOTIFICATION"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "messages"
+          },
+          {
+            "name": "sent"
+          },
+          {
+            "name": "UPDATE"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "neighbor-address"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "192.168.1.4"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854811790,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.4"
+        }
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "neighbor-port"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "peer-as"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 300
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "peer-type"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "EXTERNAL"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.4"
+        }
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "queues"
+          },
+          {
+            "name": "input"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "queues"
+          },
+          {
+            "name": "output"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749395588209648251,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.4"
+            }
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "session-state"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "ACTIVE"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854811790,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.4"
+        }
+      },
+      {
+        "name": "transport"
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "remote-address"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "192.168.1.4"
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "remote-port"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "L2VPN_EVPN"
+            }
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:L2VPN_EVPN"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "L2VPN_EVPN"
+            }
+          },
+          {
+            "name": "config"
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:L2VPN_EVPN"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107822623441,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.2"
+        }
+      },
+      {
+        "name": "afi-safis"
+      },
+      {
+        "name": "afi-safi",
+        "key": {
+          "afi-safi-name": "L2VPN_EVPN"
+        }
+      },
+      {
+        "name": "graceful-restart"
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "advertised"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "received"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107822623441,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "L2VPN_EVPN"
+            }
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "active"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.2"
+        }
+      },
+      {
+        "name": "afi-safis"
+      },
+      {
+        "name": "afi-safi",
+        "key": {
+          "afi-safi-name": "L2VPN_EVPN"
+        }
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:L2VPN_EVPN"
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "best-ecmp-paths"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "best-paths"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "installed"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "received"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "received-pre-policy"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "sent"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_UNICAST"
+            }
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:IPV4_UNICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_UNICAST"
+            }
+          },
+          {
+            "name": "config"
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:IPV4_UNICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107822623441,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.2"
+        }
+      },
+      {
+        "name": "afi-safis"
+      },
+      {
+        "name": "afi-safi",
+        "key": {
+          "afi-safi-name": "IPV4_UNICAST"
+        }
+      },
+      {
+        "name": "graceful-restart"
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "advertised"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "received"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107822623441,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_UNICAST"
+            }
+          },
+          {
+            "name": "ipv4-unicast"
+          },
+          {
+            "name": "prefix-limit"
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "prefix-limit-exceeded"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107822623441,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_UNICAST"
+            }
+          },
+          {
+            "name": "ipv4-unicast"
+          },
+          {
+            "name": "prefix-limit-received"
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "prefix-limit-exceeded"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107822623441,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_UNICAST"
+            }
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "active"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.2"
+        }
+      },
+      {
+        "name": "afi-safis"
+      },
+      {
+        "name": "afi-safi",
+        "key": {
+          "afi-safi-name": "IPV4_UNICAST"
+        }
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:IPV4_UNICAST"
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "best-ecmp-paths"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "best-paths"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "installed"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "received"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "received-pre-policy"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "sent"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_UNICAST"
+            }
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:IPV6_UNICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_UNICAST"
+            }
+          },
+          {
+            "name": "config"
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:IPV6_UNICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107822623441,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.2"
+        }
+      },
+      {
+        "name": "afi-safis"
+      },
+      {
+        "name": "afi-safi",
+        "key": {
+          "afi-safi-name": "IPV6_UNICAST"
+        }
+      },
+      {
+        "name": "graceful-restart"
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "advertised"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "received"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107822623441,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_UNICAST"
+            }
+          },
+          {
+            "name": "ipv6-unicast"
+          },
+          {
+            "name": "prefix-limit"
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "prefix-limit-exceeded"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107822623441,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_UNICAST"
+            }
+          },
+          {
+            "name": "ipv6-unicast"
+          },
+          {
+            "name": "prefix-limit-received"
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "prefix-limit-exceeded"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107822623441,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_UNICAST"
+            }
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "active"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.2"
+        }
+      },
+      {
+        "name": "afi-safis"
+      },
+      {
+        "name": "afi-safi",
+        "key": {
+          "afi-safi-name": "IPV6_UNICAST"
+        }
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "openconfig-bgp-types:IPV6_UNICAST"
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "best-ecmp-paths"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "best-paths"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "installed"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "received"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "received-pre-policy"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "prefixes"
+          },
+          {
+            "name": "sent"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107718572305,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_MULTICAST"
+            }
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "arista-bgp-augments:IPV4_MULTICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107718572305,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_MULTICAST"
+            }
+          },
+          {
+            "name": "config"
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "arista-bgp-augments:IPV4_MULTICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107822623441,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_MULTICAST"
+            }
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "active"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107718572305,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV4_MULTICAST"
+            }
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "arista-bgp-augments:IPV4_MULTICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107718572305,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_MULTICAST"
+            }
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "arista-bgp-augments:IPV6_MULTICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107718572305,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_MULTICAST"
+            }
+          },
+          {
+            "name": "config"
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "arista-bgp-augments:IPV6_MULTICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107822623441,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_MULTICAST"
+            }
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "active"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "BoolVal": false
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107718572305,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "afi-safis"
+          },
+          {
+            "name": "afi-safi",
+            "key": {
+              "afi-safi-name": "IPV6_MULTICAST"
+            }
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "afi-safi-name"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "arista-bgp-augments:IPV6_MULTICAST"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "config"
+          },
+          {
+            "name": "neighbor-address"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "192.168.1.2"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107674860626,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "config"
+          },
+          {
+            "name": "peer-as"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 100
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107674860626,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "ebgp-multihop"
+          },
+          {
+            "name": "config"
+          },
+          {
+            "name": "multihop-ttl"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107674860626,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "ebgp-multihop"
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "multihop-ttl"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "neighbor-address"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "192.168.1.2"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107822623441,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.2"
+        }
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "established-transitions"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "last-established"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 1749384104259302377
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "last-prefix-limit-exceeded"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.2"
+        }
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "messages"
+          },
+          {
+            "name": "received"
+          },
+          {
+            "name": "NOTIFICATION"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "messages"
+          },
+          {
+            "name": "received"
+          },
+          {
+            "name": "UPDATE"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "messages"
+          },
+          {
+            "name": "sent"
+          },
+          {
+            "name": "NOTIFICATION"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "messages"
+          },
+          {
+            "name": "sent"
+          },
+          {
+            "name": "UPDATE"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "neighbor-address"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "192.168.1.2"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107822623441,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.2"
+        }
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "neighbor-port"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "peer-as"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 100
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "peer-type"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "EXTERNAL"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107854209388,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.2"
+        }
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "queues"
+          },
+          {
+            "name": "input"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "queues"
+          },
+          {
+            "name": "output"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749395524117664874,
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "network-instances"
+          },
+          {
+            "name": "network-instance",
+            "key": {
+              "name": "default"
+            }
+          },
+          {
+            "name": "protocols"
+          },
+          {
+            "name": "protocol",
+            "key": {
+              "identifier": "BGP",
+              "name": "BGP"
+            }
+          },
+          {
+            "name": "bgp"
+          },
+          {
+            "name": "neighbors"
+          },
+          {
+            "name": "neighbor",
+            "key": {
+              "neighbor-address": "192.168.1.2"
+            }
+          },
+          {
+            "name": "state"
+          },
+          {
+            "name": "session-state"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "ACTIVE"
+        }
+      }
+    }
+  ]
+}
+Update:
+ {
+  "timestamp": 1749384107822623441,
+  "prefix": {
+    "elem": [
+      {
+        "name": "network-instances"
+      },
+      {
+        "name": "network-instance",
+        "key": {
+          "name": "default"
+        }
+      },
+      {
+        "name": "protocols"
+      },
+      {
+        "name": "protocol",
+        "key": {
+          "identifier": "BGP",
+          "name": "BGP"
+        }
+      },
+      {
+        "name": "bgp"
+      },
+      {
+        "name": "neighbors"
+      },
+      {
+        "name": "neighbor",
+        "key": {
+          "neighbor-address": "192.168.1.2"
+        }
+      },
+      {
+        "name": "transport"
+      },
+      {
+        "name": "state"
+      }
+    ]
+  },
+  "update": [
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "remote-address"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "StringVal": "192.168.1.2"
+        }
+      }
+    },
+    {
+      "path": {
+        "elem": [
+          {
+            "name": "remote-port"
+          }
+        ]
+      },
+      "val": {
+        "Value": {
+          "UintVal": 0
+        }
+      }
+    }
+  ]
+}

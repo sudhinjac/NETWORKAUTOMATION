@@ -1,0 +1,5 @@
+Set-Alias tshark "C:\Program Files\Wireshark\tshark.exe"
+
+sudo ip route add <destination-network>/<subnet> via <gateway-ip> dev <interface>
+
+startxfce4
