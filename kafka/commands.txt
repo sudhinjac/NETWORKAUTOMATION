@@ -5,15 +5,21 @@ go get github.com/segmentio/kafka-go
 # In one terminal:
 bin/zookeeper-server-start.sh config/zookeeper.properties
 bin/zookeeper-server-start.sh config/zookeeper.properties
+bin/zookeeper-server-start.sh config/zookeeper.properties
 # In another:
 bin/kafka-server-start.sh config/server.properties
-
+rm -rf /tmp/kafka-logs
 # Create topic:
 bin/kafka-topics.sh --create --topic bgp-status --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
-
+bin/kafka-server-start.sh config/server.properties
 📡 Subscribed to gNMI BGP state stream. Sending to Kafka...
 ✅ Sent to Kafka: {"timestamp":..., "path": ..., "value": ...}
 
 bin/kafka-console-consumer.sh --topic bgp-status --bootstrap-server localhost:9092 --from-beginning
 
+bin/kafka-console-consumer.sh --topic bgp-status --from-beginning --bootstrap-server localhost:9092
+udhin@sudhin:/tmp/kafka-logs/bgp-status-0$
+sudhin@sudhin:/tmp/kafka-logs/bgp-status-0$ pwd
+/tmp/kafka-logs/bgp-status-0
+sudhin@sudhin:/tmp/kafka-logs/bgp-status-0$
