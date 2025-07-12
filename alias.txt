@@ -3,3 +3,23 @@ Set-Alias tshark "C:\Program Files\Wireshark\tshark.exe"
 sudo ip route add <destination-network>/<subnet> via <gateway-ip> dev <interface>
 
 startxfce4
+
+cd ~/kafka/kafka
+bin/kafka-server-start.sh config/server.properties
+
+bin/kafka-console-consumer.sh --topic test-topic --bootstrap-server localhost:9092 --from-beginning
+
+bin/kafka-console-producer.sh --topic test-topic --bootstrap-server localhost:9092
+
+
+
+
+bin/kafka-topics.sh --create --topic test-topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+
+
+bin/kafka-console-producer.sh --topic test-topic --bootstrap-server localhost:9092
+
+
+bin/kafka-console-consumer.sh --topic test-topic --from-beginning --bootstrap-server localhost:9092

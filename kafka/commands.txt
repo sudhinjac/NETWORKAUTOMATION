@@ -1,0 +1,19 @@
+go get google.golang.org/grpc
+go get github.com/openconfig/gnmi/proto/gnmi
+go get github.com/segmentio/kafka-go
+
+# In one terminal:
+bin/zookeeper-server-start.sh config/zookeeper.properties
+bin/zookeeper-server-start.sh config/zookeeper.properties
+# In another:
+bin/kafka-server-start.sh config/server.properties
+
+# Create topic:
+bin/kafka-topics.sh --create --topic bgp-status --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+
+📡 Subscribed to gNMI BGP state stream. Sending to Kafka...
+✅ Sent to Kafka: {"timestamp":..., "path": ..., "value": ...}
+
+bin/kafka-console-consumer.sh --topic bgp-status --bootstrap-server localhost:9092 --from-beginning
+
