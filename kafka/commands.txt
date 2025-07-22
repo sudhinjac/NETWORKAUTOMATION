@@ -8,7 +8,7 @@ bin/zookeeper-server-start.sh config/zookeeper.properties
 bin/zookeeper-server-start.sh config/zookeeper.properties
 # In another:
 bin/kafka-server-start.sh config/server.properties
-rm -rf /tmp/kafka-logs
+rm -rf /tmp/kafka-logskafka-topics.sh --create --topic router-metrics --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
 # Create topic:
 bin/kafka-topics.sh --create --topic bgp-status --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
