@@ -3,132 +3,133 @@ package main
 import (
 	"context"
 	"encoding/json"
-	"fmt"
 	"log"
 	"strings"
-	"sync"
 	"time"
 
 	"github.com/Shopify/sarama"
+	"github.com/openconfig/gnmi/proto/gnmi"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
-
-	gpb "github.com/openconfig/gnmi/proto/gnmi"
 )
 
-type RouterConfig struct {
+type Router struct {
 	Name     string
 	Address  string
 	Username string
 	Password string
 }
 
-var routers = []RouterConfig{
-	{"Router1", "192.168.1.1:57400", "admin", "admin"},
-	{"Router2", "192.168.1.2:57400", "admin", "admin"},
-	{"Router3", "192.168.1.3:57400", "admin", "admin"},
+type basicAuth struct {
+	username, password string
 }
 
-type InterfaceStat struct {
-	InterfaceName string `json:"interface_name"`
-	InPackets     uint64 `json:"in_packets"`
-	OutPackets    uint64 `json:"out_packets"`
+func (a *basicAuth) GetRequestMetadata(ctx context.Context, uri ...string) (map[string]string, error) {
+	return map[string]string{
+		"username": a.username,
+		"password": a.password,
+	}, nil
 }
+func (a *basicAuth) RequireTransportSecurity() bool { return false }
 
-type BGPNeighbor struct {
-	NeighborIP string `json:"neighbor_ip"`
-	State      string `json:"state"`
-}
-
-type KafkaMessage struct {
-	RouterName   string          `json:"router_name"`
-	Timestamp    string          `json:"timestamp"`
-	Interfaces   []InterfaceStat `json:"interfaces"`
-	BGPNeighbors []BGPNeighbor   `json:"bgp_neighbors"`
-}
-
-var kafkaTopic = "bgp-telemetry"
-
-func main() {
-	producer := initKafkaProducer()
-	defer producer.Close()
-
-	for _, router := range routers {
-		go collectTelemetry(router, producer)
-	}
-
-	select {} // block forever
-}
-
-func initKafkaProducer() sarama.SyncProducer {
+// Kafka
+func connectKafka(brokerList []string) sarama.SyncProducer {
 	config := sarama.NewConfig()
 	config.Producer.Return.Successes = true
-	producer, err := sarama.NewSyncProducer([]string{"localhost:9092"}, config)
+	producer, err := sarama.NewSyncProducer(brokerList, config)
 	if err != nil {
-		log.Fatalf("Kafka producer error: %v", err)
+		log.Fatalf("Kafka error: %v", err)
 	}
 	return producer
 }
 
-func collectTelemetry(router RouterConfig, producer sarama.SyncProducer) {
-	conn, err := grpc.Dial(router.Address, grpc.WithTransportCredentials(insecure.NewCredentials()))
+// gNMI Path helper
+func gnmiPath(pathStr string) *gnmi.Path {
+	elems := []*gnmi.PathElem{}
+	for _, p := range strings.Split(pathStr, "/") {
+		if p != "" {
+			elems = append(elems, &gnmi.PathElem{Name: p})
+		}
+	}
+	return &gnmi.Path{Elem: elems}
+}
+
+// Telemetry logic
+func collectTelemetry(router Router, producer sarama.SyncProducer, topic string) {
+	conn, err := grpc.Dial(
+		router.Address,
+		grpc.WithTransportCredentials(insecure.NewCredentials()),
+		grpc.WithPerRPCCredentials(&basicAuth{username: router.Username, password: router.Password}),
+	)
 	if err != nil {
-		log.Printf("Failed to connect to %s: %v", router.Name, err)
-		return
+		log.Fatalf("[%s] gRPC dial error: %v", router.Name, err)
 	}
 	defer conn.Close()
 
-	client := gpb.NewGNMIClient(conn)
-	ctx := context.Background()
+	client := gnmi.NewGNMIClient(conn)
 
-	req := &gpb.SubscribeRequest{
-		Request: &gpb.SubscribeRequest_Subscribe{
-			Subscribe: &gpb.SubscriptionList{
-				Mode: gpb.SubscriptionList_STREAM,
-				Subscription: []*gpb.Subscription{
-					{Path: toPath("interfaces/interface/state/in-octets"), Mode: gpb.SubscriptionMode_ON_CHANGE},
-					{Path: toPath("interfaces/interface/state/out-octets"), Mode: gpb.SubscriptionMode_ON_CHANGE},
-					{Path: toPath("network-instances/network-instance/protocols/protocol/bgp/neighbors/neighbor/state/session-state"), Mode: gpb.SubscriptionMode_ON_CHANGE},
-				},
-			},
+	// Subscribe to BGP and interface input counters
+	subList := &gnmi.SubscriptionList{
+		Mode: gnmi.SubscriptionList_STREAM,
+		Subscription: []*gnmi.Subscription{
+			{Path: gnmiPath("/interfaces/interface/state/counters/in-octets"), Mode: gnmi.SubscriptionMode_ON_CHANGE},
+			{Path: gnmiPath("network-instances/network-instance/protocols/protocol/bgp/neighbors/neighbor/state/session-state"), Mode: gnmi.SubscriptionMode_ON_CHANGE},
 		},
 	}
 
+	subReq := &gnmi.SubscribeRequest{
+		Request: &gnmi.SubscribeRequest_Subscribe{Subscribe: subList},
+	}
+
+	ctx := context.Background()
 	stream, err := client.Subscribe(ctx)
 	if err != nil {
-		log.Printf("[%s] Subscribe error: %v", router.Name, err)
-		return
+		log.Fatalf("[%s] Subscribe error: %v", router.Name, err)
+	}
+	if err := stream.Send(subReq); err != nil {
+		log.Fatalf("[%s] Send request error: %v", router.Name, err)
 	}
 
-	if err := stream.Send(req); err != nil {
-		log.Printf("[%s] Send error: %v", router.Name, err)
-		return
-	}
-
-	var mu sync.Mutex
-	interfaceData := map[string]*InterfaceStat{}
-	neighborData := map[string]*BGPNeighbor{}
+	// Store state
+	interfaceMap := make(map[string]uint64)
+	neighborMap := make(map[string]string)
 
 	ticker := time.NewTicker(5 * time.Second)
+	defer ticker.Stop()
+
 	go func() {
 		for range ticker.C {
-			mu.Lock()
-			msg := KafkaMessage{
-				RouterName:   router.Name,
-				Timestamp:    time.Now().Format(time.RFC3339),
-				BGPNeighbors: []BGPNeighbor{},
-				Interfaces:   []InterfaceStat{},
-			}
-			for _, v := range neighborData {
-				msg.BGPNeighbors = append(msg.BGPNeighbors, *v)
-			}
-			for _, v := range interfaceData {
-				msg.Interfaces = append(msg.Interfaces, *v)
+			// Compose Kafka message
+			payload := map[string]interface{}{
+				"router":    router.Name,
+				"timestamp": time.Now().Format(time.RFC3339),
+				"interfaces": func() []map[string]interface{} {
+					var arr []map[string]interface{}
+					for k, v := range interfaceMap {
+						arr = append(arr, map[string]interface{}{"name": k, "in_packets": v})
+					}
+					return arr
+				}(),
+				"bgp_neighbors": func() []map[string]interface{} {
+					var arr []map[string]interface{}
+					for ip, state := range neighborMap {
+						arr = append(arr, map[string]interface{}{"neighbor_ip": ip, "state": state})
+					}
+					return arr
+				}(),
 			}
 
-			data, _ := json.Marshal(msg)
-			produceKafkaMessageJSON(data, producer)
-			mu.Unlock()
+			jsonData, _ := json.Marshal(payload)
+			msg := &sarama.ProducerMessage{
+				Topic: topic,
+				Value: sarama.ByteEncoder(jsonData),
+			}
+			_, _, err := producer.SendMessage(msg)
+			if err != nil {
+				log.Printf("[%s] Kafka publish error: %v", router.Name, err)
+			} else {
+				log.Printf("[%s] Published telemetry update", router.Name)
+			}
 		}
 	}()
 
@@ -139,70 +140,38 @@ func collectTelemetry(router RouterConfig, producer sarama.SyncProducer) {
 			break
 		}
 
-		if update, ok := resp.Response.(*gpb.SubscribeResponse_Update); ok {
-			for _, u := range update.Update.Update {
-				pathStr := pathToString(u.Path)
-				value := u.Val.GetUintVal()
-				mu.Lock()
-				switch {
-				case strings.Contains(pathStr, "session-state"):
-					ip := extractIP(pathStr)
-					if neighborData[ip] == nil {
-						neighborData[ip] = &BGPNeighbor{}
-					}
-					neighborData[ip].NeighborIP = ip
-					neighborData[ip].State = u.Val.GetStringVal()
+		updateResp, ok := resp.Response.(*gnmi.SubscribeResponse_Update)
+		if !ok {
+			continue
+		}
 
-				case strings.Contains(pathStr, "in-octets"):
-					ifName := extractInterface(pathStr)
-					if interfaceData[ifName] == nil {
-						interfaceData[ifName] = &InterfaceStat{InterfaceName: ifName}
-					}
-					interfaceData[ifName].InPackets = value
-
-				case strings.Contains(pathStr, "out-octets"):
-					ifName := extractInterface(pathStr)
-					if interfaceData[ifName] == nil {
-						interfaceData[ifName] = &InterfaceStat{InterfaceName: ifName}
-					}
-					interfaceData[ifName].OutPackets = value
-				}
-				mu.Unlock()
+		for _, update := range updateResp.Update.Update {
+			pathStr := pathToString(update.Path)
+			if strings.Contains(pathStr, "in-octets") {
+				ifName := extractKey(update.Path, "interface")
+				interfaceMap[ifName] = update.Val.GetUintVal()
+			}
+			if strings.Contains(pathStr, "session-state") {
+				neighborIP := extractKey(update.Path, "neighbor")
+				neighborMap[neighborIP] = update.Val.GetStringVal()
 			}
 		}
 	}
 }
 
-func parseUpdate(routerName string, resp *gpb.SubscribeResponse) string {
-	if update, ok := resp.Response.(*gpb.SubscribeResponse_Update); ok {
-		for _, u := range update.Update.Update {
-			pathStr := pathToString(u.Path)
-			valueStr := fmt.Sprintf("%v", u.Val.GetValue())
-			switch {
-			case strings.Contains(pathStr, "session-state"):
-				return fmt.Sprintf("Router:%s BGP Neighbour:%s STATE:%s", routerName, extractIP(pathStr), valueStr)
-			case strings.Contains(pathStr, "in-octets"):
-				return fmt.Sprintf("Router:%s Interface:%s inpackets:%s", routerName, extractInterface(pathStr), valueStr)
-			case strings.Contains(pathStr, "out-octets"):
-				return fmt.Sprintf("Router:%s Interface:%s outpackets:%s", routerName, extractInterface(pathStr), valueStr)
+// Helper: extract keyed name from gNMI path
+func extractKey(path *gnmi.Path, match string) string {
+	for _, elem := range path.Elem {
+		if elem.Name == match {
+			for _, v := range elem.Key {
+				return v
 			}
 		}
 	}
-	return ""
+	return "unknown"
 }
 
-func toPath(p string) *gpb.Path {
-	elems := strings.Split(p, "/")
-	var pathElems []*gpb.PathElem
-	for _, elem := range elems {
-		if elem != "" {
-			pathElems = append(pathElems, &gpb.PathElem{Name: elem})
-		}
-	}
-	return &gpb.Path{Elem: pathElems}
-}
-
-func pathToString(p *gpb.Path) string {
+func pathToString(p *gnmi.Path) string {
 	parts := []string{}
 	for _, e := range p.Elem {
 		parts = append(parts, e.Name)
@@ -210,33 +179,21 @@ func pathToString(p *gpb.Path) string {
 	return strings.Join(parts, "/")
 }
 
-func extractIP(path string) string {
-	parts := strings.Split(path, "/")
-	for i, part := range parts {
-		if part == "neighbor" && i+1 < len(parts) {
-			return parts[i+1]
-		}
+// MAIN
+func main() {
+	routers := []Router{
+		{"Router1", "192.168.255.137:6030", "sudhin", "sudhin"},
+		{"Router2", "192.168.255.138:6030", "sudhin", "sudhin"},
 	}
-	return "unknown"
-}
 
-func extractInterface(path string) string {
-	parts := strings.Split(path, "/")
-	for i, part := range parts {
-		if part == "interface" && i+1 < len(parts) {
-			return parts[i+1]
-		}
-	}
-	return "unknown"
-}
+	kafkaBrokers := []string{"localhost:9092"}
+	kafkaTopic := "bgp-telemetry"
+	producer := connectKafka(kafkaBrokers)
+	defer producer.Close()
 
-func produceKafkaMessageJSON(data []byte, producer sarama.SyncProducer) {
-	msg := &sarama.ProducerMessage{
-		Topic: kafkaTopic,
-		Value: sarama.ByteEncoder(data),
+	for _, router := range routers {
+		go collectTelemetry(router, producer, kafkaTopic)
 	}
-	_, _, err := producer.SendMessage(msg)
-	if err != nil {
-		log.Printf("Kafka send error: %v", err)
-	}
+
+	select {} // block forever
 }

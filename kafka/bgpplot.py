@@ -1,108 +1,93 @@
-import streamlit as st
-import pandas as pd
 import json
 from kafka import KafkaConsumer
-from datetime import datetime
-import plotly.express as px
+import streamlit as st
+import pandas as pd
+import time
 
-# Kafka configuration
 KAFKA_TOPIC = "bgp-telemetry"
-KAFKA_BOOTSTRAP_SERVERS = ["localhost:9092"]  # Update if needed
+KAFKA_BOOTSTRAP_SERVERS = "localhost:9092"  # adjust if needed
+REFRESH_INTERVAL = 10  # seconds
 
-st.set_page_config(page_title="BGP Kafka Monitor", layout="wide")
+st.set_page_config(page_title="BGP Telemetry Dashboard", layout="wide")
 
-st.title("📡 BGP Session State Live Monitor")
+st.title("📡 BGP Telemetry Dashboard")
+st.markdown(f"Auto-refreshing every `{REFRESH_INTERVAL}` seconds. Click below to refresh manually.")
 
-# Initialize Kafka consumer only once
-@st.cache_resource
-def get_consumer():
-    return KafkaConsumer(
+# Manual refresh button
+if st.button("🔁 Refresh Now"):
+    st.rerun()
+
+# Placeholder for warning if no data
+no_data_warning = st.empty()
+
+@st.cache_data(ttl=REFRESH_INTERVAL)
+def consume_kafka_messages():
+    consumer = KafkaConsumer(
         KAFKA_TOPIC,
         bootstrap_servers=KAFKA_BOOTSTRAP_SERVERS,
-        auto_offset_reset="latest",
+        auto_offset_reset='latest',
         enable_auto_commit=True,
-        value_deserializer=lambda x: json.loads(x.decode("utf-8"))
+        group_id='bgp-streamlit',
+        value_deserializer=lambda m: json.loads(m.decode('utf-8')),
+        consumer_timeout_ms=3000,
     )
 
-consumer = get_consumer()
+    messages = []
+    try:
+        for msg in consumer:
+            messages.append(msg.value)
+    except Exception as e:
+        st.error(f"Error reading from Kafka: {e}")
+    finally:
+        consumer.close()
+    return messages
 
-# Session state to store data
-if "bgp_data" not in st.session_state:
-    st.session_state.bgp_data = []
+messages = consume_kafka_messages()
 
-# Read messages
-def read_kafka_messages(max_msgs=50):
-    new_msgs = []
-    for msg in consumer.poll(timeout_ms=1000, max_records=max_msgs).values():
-        for record in msg:
-            new_msgs.append(record.value)
-    return new_msgs
-
-new_data = read_kafka_messages()
-st.session_state.bgp_data.extend(new_data)
-
-# Convert to DataFrame
-if not st.session_state.bgp_data:
-    st.warning("⏳ Waiting for BGP session data from Kafka...")
+if not messages:
+    no_data_warning.warning("⚠️ No messages received from Kafka.")
     st.stop()
 
-df_raw = pd.DataFrame(st.session_state.bgp_data)
-df_raw["timestamp"] = pd.to_datetime(df_raw["timestamp"])
+no_data_warning.empty()
 
-routers = df_raw["router"].unique()
-selected_router = st.selectbox("Select Router", routers)
+# Latest timestamp
+latest_time = messages[-1]['timestamp']
+st.subheader(f"🕒 Latest Telemetry Timestamp: `{latest_time}`")
 
-df_router = df_raw[df_raw["router"] == selected_router]
-
-# ----------------------
-# BGP Neighbors Section
-# ----------------------
-st.subheader("🔁 BGP Neighbor State")
-
-bgp_records = []
-for _, row in df_router.iterrows():
-    for neighbor in row["bgp_neighbors"]:
-        bgp_records.append({
-            "timestamp": row["timestamp"],
-            "router": row["router"],
-            "neighbor": neighbor["ip"],
-            "state": neighbor["state"]
+# --- BGP Neighbors Table ---
+st.markdown("### 🧭 BGP Neighbors Status")
+bgp_rows = []
+for msg in messages[-10:]:  # show last 10
+    for neighbor in msg.get("bgp_neighbors", []):
+        bgp_rows.append({
+            "Router": msg.get("router", "N/A"),
+            "Neighbor IP": neighbor.get("neighbor_ip", "N/A"),
+            "State": neighbor.get("state", "UNKNOWN"),
+            "Timestamp": msg.get("timestamp", "N/A"),
         })
 
-df_bgp = pd.DataFrame(bgp_records)
-state_map = {"IDLE": 0, "ACTIVE": 1, "ESTABLISHED": 2}
-df_bgp["state_code"] = df_bgp["state"].map(state_map)
+if bgp_rows:
+    df_bgp = pd.DataFrame(bgp_rows)
+    st.dataframe(df_bgp, use_container_width=True)
+else:
+    st.info("No BGP neighbor data found.")
 
-for neighbor_ip in df_bgp["neighbor"].unique():
-    df_neighbor = df_bgp[df_bgp["neighbor"] == neighbor_ip]
-    fig = px.line(df_neighbor, x="timestamp", y="state_code", title=f"BGP Neighbor {neighbor_ip} State", markers=True)
-    fig.update_yaxes(tickvals=[0,1,2], ticktext=["IDLE", "ACTIVE", "ESTABLISHED"])
-    st.plotly_chart(fig, use_container_width=True)
-
-# ----------------------
-# Interface Packets Section
-# ----------------------
-st.subheader("📦 Interface Packets")
-
-iface_records = []
-for _, row in df_router.iterrows():
-    for iface in row["interfaces"]:
-        iface_records.append({
-            "timestamp": row["timestamp"],
-            "interface": iface["name"],
-            "in_packets": iface["in_packets"],
-            "out_packets": iface["out_packets"]
+# --- Interface Packets Chart ---
+st.markdown("### 📶 Interface Packet Count")
+interface_rows = []
+for msg in messages[-10:]:
+    for iface in msg.get("interfaces", []):
+        interface_rows.append({
+            "Router": msg.get("router", "N/A"),
+            "Interface": iface.get("name", "N/A"),
+            "In Packets": iface.get("in_packets", 0),
+            "Timestamp": msg.get("timestamp", "N/A"),
         })
 
-df_iface = pd.DataFrame(iface_records)
-
-for iface_name in df_iface["interface"].unique():
-    df_iface_i = df_iface[df_iface["interface"] == iface_name]
-    
-    fig1 = px.line(df_iface_i, x="timestamp", y="in_packets", title=f"Interface {iface_name} - In Packets", markers=True)
-    fig2 = px.line(df_iface_i, x="timestamp", y="out_packets", title=f"Interface {iface_name} - Out Packets", markers=True)
-
-    st.plotly_chart(fig1, use_container_width=True)
-    st.plotly_chart(fig2, use_container_width=True)
-
-st.success("✅ Live data stream updated.")
+if interface_rows:
+    df_if = pd.DataFrame(interface_rows)
+    df_chart = df_if.groupby(["Router", "Interface"]).agg({"In Packets": "mean"}).reset_index()
+    chart = df_chart.pivot(index="Interface", columns="Router", values="In Packets").fillna(0)
+    st.bar_chart(chart)
+else:
+    st.info("No interface packet data found.")

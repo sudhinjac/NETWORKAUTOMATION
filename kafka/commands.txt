@@ -23,3 +23,15 @@ udhin@sudhin:/tmp/kafka-logs/bgp-status-0$
 sudhin@sudhin:/tmp/kafka-logs/bgp-status-0$ pwd
 /tmp/kafka-logs/bgp-status-0
 sudhin@sudhin:/tmp/kafka-logs/bgp-status-0$
+
+bin/kafka-topics.sh --create --topic bgp-telemetry --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+cd ~/your-go-project/
+go mod init your-module-name   # if you haven't initialized Go modules yet
+go get github.com/Shopify/sarama
+
+go get github.com/Shopify/sarama@v1.37.0
+
+go clean -modcache
+
+go mod tidy
