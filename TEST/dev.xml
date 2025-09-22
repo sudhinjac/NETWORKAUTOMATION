@@ -1,0 +1,25 @@
+<data xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"
+      xmlns:l2sw="http://sudhin.com">
+  <l2sw:switch>
+    <l2sw:hostname>sudhin</l2sw:hostname>
+
+    <l2sw:interface>
+      <l2sw:name>Ethernet1</l2sw:name>
+      <l2sw:description>Uplink</l2sw:description>
+      <l2sw:speed>1000</l2sw:speed>
+    </l2sw:interface>
+
+    <l2sw:interface>
+      <l2sw:name>Ethernet2</l2sw:name>
+      <l2sw:description>Downlink</l2sw:description>
+      <l2sw:speed>100</l2sw:speed>
+    </l2sw:interface>
+
+    <l2sw:interface>
+      <l2sw:name>Ethernet3</l2sw:name>
+      <l2sw:description>Access</l2sw:description>
+      <l2sw:speed>100</l2sw:speed>
+    </l2sw:interface>
+
+  </l2sw:switch>
+</data>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="exslt"><sch:ns uri="http://exslt.org/dynamic" prefix="dyn"/><sch:ns uri="http://sudhin.com" prefix="l2sw"/><sch:ns uri="urn:ietf:params:xml:ns:netconf:base:1.0" prefix="nc"/><sch:let name="root" value="/nc:data"/><sch:pattern id="switch"><sch:rule context="/nc:data/l2sw:switch/l2sw:interface"><sch:report test="preceding-sibling::l2sw:interface[l2sw:name=current()/l2sw:name]">Duplicate key "l2sw:name"</sch:report></sch:rule></sch:pattern></sch:schema>

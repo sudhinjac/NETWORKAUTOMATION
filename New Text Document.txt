@@ -1,0 +1,2 @@
+pyang switch.yang -f tree
+$ yang2dsdl -v dev.xml switch.yang

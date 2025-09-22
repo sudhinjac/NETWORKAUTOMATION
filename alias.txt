@@ -23,3 +23,60 @@ bin/kafka-console-producer.sh --topic test-topic --bootstrap-server localhost:90
 
 
 bin/kafka-console-consumer.sh --topic test-topic --from-beginning --bootstrap-server localhost:9092
+
+
+
+sudo ip route add 192.168.255.0/24 via 172.24.128.1
+
+sudo docker run -d \
+  --name openwebui \
+  -p 8080:8080 \
+  ghcr.io/open-webui/open-webui:latest
+sudo apt remove podman podman-docker -y
+sudo apt update
+sudo apt install -y ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
+  https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+
+# Enable Ollama integration
+OLLAMA_ENABLED=true
+
+# URL of your Ollama server
+OLLAMA_BASE_URL=http://127.0.0.1:11434
+
+# Default Ollama model to use
+OLLAMA_MODEL=llama2
+
+# Optional: allow any origin (for web access)
+CORS_ALLOW_ORIGIN=*
+
+docker stop openwebui 2>/dev/null
+docker rm openwebui 2>/dev/null
+
+docker run -d \
+  --name openwebui \
+  --network host \
+  -v ~/.openwebui:/root/.openwebui \
+  --env-file ~/.openwebui/open_webui.env \
+  ghcr.io/open-webui/open-webui:latest
+
+docker compose up -d
+
+
+Example Python Code is available at https://github.com/python-in-containers/simple-flask
+Commands shown in this Lecture require a working Docker environment installed on Development Host. Docker installation Lectures are located in Section 2 Docker Deep Dive.
+Commands used:
+$ git clone https://github.com/python-in-containers/simple-flask
+$ cd simple-flask
+$ atom .
+$ docker build -t pythonincontainers/simple-flask:v1.0 .
+$ docker run --rm -it -p 5001:5000 pythonincontainers/simple-flask:v1.0
+Open Web browser with address localhost:5001. Substitute localhost with Docker Machine IP Address, if necessary.
+Press <Ctrl-C> to stop Flask App.

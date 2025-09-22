@@ -1,0 +1,24 @@
+module switch {
+
+    namespace "http://sudhin.com";
+    prefix "l2sw";
+   
+   container switch {
+    leaf hostname {
+        type string;
+    }
+
+    list interface {
+        key name;
+        leaf name {
+        type string;
+        }
+        leaf description {
+            type string;
+        }
+        leaf speed{
+            type uint32;
+        }
+}
+}
+   }
