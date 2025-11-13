@@ -11,13 +11,44 @@ module switch {
     list interface {
         key name;
         leaf name {
-        type string;
+        type string {
+            pattern ".*Ethernet0/[0-9]+";
+        }
+          
         }
         leaf description {
-            type string;
+            type string {
+                length "4..50";
+            }
         }
         leaf speed{
             type uint32;
+            units "Mbps";
+            config false;
+        }
+        leaf mode {
+            type enumeration {
+                enum access;
+                enum trunk;
+            }
+        }
+        choice access-or-trunk {
+            case access {
+                leaf access-vlan {
+                    type uint16 {
+                    range "1..4094";
+                    }
+                }
+                when "mode='access'";
+            }
+            case trunk {
+                leaf-list trunked-vlan {
+                    type uint16 {
+                    range "1..4094";
+                    }
+                }
+                when "mode='trunk'";
+            }
         }
 }
 }

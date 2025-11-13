@@ -4,21 +4,29 @@
     <l2sw:hostname>sudhin</l2sw:hostname>
 
     <l2sw:interface>
-      <l2sw:name>Ethernet1</l2sw:name>
+      <l2sw:name>Ethernet0/1</l2sw:name>
       <l2sw:description>Uplink</l2sw:description>
       <l2sw:speed>1000</l2sw:speed>
+      <l2sw:mode>trunk</l2sw:mode>
+      <l2sw:trunked-vlan>100</l2sw:trunked-vlan>
+      <l2sw:trunked-vlan>200</l2sw:trunked-vlan>
+      <l2sw:trunked-vlan>300</l2sw:trunked-vlan>
     </l2sw:interface>
 
     <l2sw:interface>
-      <l2sw:name>Ethernet2</l2sw:name>
+      <l2sw:name>Ethernet0/2</l2sw:name>
       <l2sw:description>Downlink</l2sw:description>
       <l2sw:speed>100</l2sw:speed>
+      <l2sw:mode>access</l2sw:mode>
+      <l2sw:access-vlan>100</l2sw:access-vlan>
     </l2sw:interface>
 
     <l2sw:interface>
-      <l2sw:name>Ethernet3</l2sw:name>
+      <l2sw:name>Ethernet0/3</l2sw:name>
       <l2sw:description>Access</l2sw:description>
       <l2sw:speed>100</l2sw:speed>
+      <l2sw:mode>access</l2sw:mode>
+      <l2sw:access-vlan>200</l2sw:access-vlan>
     </l2sw:interface>
 
   </l2sw:switch>
