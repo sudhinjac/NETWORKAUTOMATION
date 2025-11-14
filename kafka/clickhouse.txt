@@ -1,0 +1,133 @@
+# change if needed
+KAFKA_BIN=~/kafka/kafka/bin
+KAFKA_BOOTSTRAP=localhost:9092
+
+# choose names (use fixed group name so ClickHouse doesn't re-use weird values)
+KAFKA_TOPIC=bgp-telemetry
+CH_DB=net
+CH_KAFKA_TABLE=kafka_bgp_raw
+CH_MV=mv_kafka_to_events
+CH_MT=bgp_events
+CH_GROUP=ch_clickhouse_bgp_01
+
+
+# create topic (3 partitions, RF 1 for local dev)
+$KAFKA_BIN/kafka-topics.sh --bootstrap-server $KAFKA_BOOTSTRAP --create --topic $KAFKA_TOPIC --partitions 3 --replication-factor 1
+
+# list topics
+$KAFKA_BIN/kafka-topics.sh --bootstrap-server $KAFKA_BOOTSTRAP --list
+
+# describe topic
+$KAFKA_BIN/kafka-topics.sh --bootstrap-server $KAFKA_BOOTSTRAP --describe --topic $KAFKA_TOPIC
+
+# single message (one-line JSON)
+echo '{"router":"TEST_R1","timestamp":"2025-11-14T00:00:00Z","bgp_neighbors":"[]","interfaces":"[]"}' \
+  | $KAFKA_BIN/kafka-console-producer.sh --bootstrap-server $KAFKA_BOOTSTRAP --topic $KAFKA_TOPIC
+
+# produce multiple messages from file
+cat my_messages.jsonl | $KAFKA_BIN/kafka-console-producer.sh --bootstrap-server $KAFKA_BOOTSTRAP --topic $KAFKA_TOPIC
+# consume from beginning without a group (ad-hoc)
+$KAFKA_BIN/kafka-console-consumer.sh --bootstrap-server $KAFKA_BOOTSTRAP --topic $KAFKA_TOPIC --from-beginning --max-messages 5
+
+# consume with a group (this creates the group when the consumer joins)
+$KAFKA_BIN/kafka-console-consumer.sh --bootstrap-server $KAFKA_BOOTSTRAP --topic $KAFKA_TOPIC --group $CH_GROUP --max-messages 1
+
+# list consumer groups
+$KAFKA_BIN/kafka-consumer-groups.sh --bootstrap-server $KAFKA_BOOTSTRAP --list
+
+# describe group offsets
+$KAFKA_BIN/kafka-consumer-groups.sh --bootstrap-server $KAFKA_BOOTSTRAP --describe --group $CH_GROUP
+-- (A) drop old objects (safe if not exists)
+DROP MATERIALIZED VIEW IF EXISTS net.mv_kafka_to_events;
+DROP TABLE IF EXISTS net.kafka_bgp_raw;
+DROP TABLE IF EXISTS net.bgp_events;
+DROP DATABASE IF EXISTS net;
+
+-- (B) create database
+CREATE DATABASE IF NOT EXISTS net;
+
+-- (C) create MergeTree table (target)
+CREATE TABLE net.bgp_events (
+  router String,
+  ts Nullable(DateTime64(3)),
+  bgp_neighbors String,
+  interfaces String
+) ENGINE = MergeTree()
+ORDER BY (router, ts);
+
+-- (D) create Kafka ENGINE table (exact broker and topic)
+CREATE TABLE net.kafka_bgp_raw (
+  router String,
+  `timestamp` String,
+  bgp_neighbors String,
+  interfaces String
+) ENGINE = Kafka
+SETTINGS
+  kafka_broker_list = 'localhost:9092',
+  kafka_topic_list  = 'bgp-telemetry',
+  kafka_group_name  = 'ch_clickhouse_bgp_01',
+  kafka_format      = 'JSONEachRow',
+  kafka_num_consumers = 3;
+
+-- (E) create Materialized View to push into MergeTree
+CREATE MATERIALIZED VIEW net.mv_kafka_to_events
+TO net.bgp_events AS
+SELECT
+  router,
+  parseDateTimeBestEffortOrNull(`timestamp`) AS ts,
+  bgp_neighbors,
+  interfaces
+FROM net.kafka_bgp_raw;
+-- allow direct selects (helpful for debugging)
+SET stream_like_engine_allow_direct_select = 1;
+
+-- check kafka engine raw table contents (shows latest read rows)
+SELECT * FROM net.kafka_bgp_raw LIMIT 5;
+
+-- check whether MV exists and TO target
+SHOW CREATE TABLE net.mv_kafka_to_events;
+
+-- check MergeTree contents
+SELECT count() FROM net.bgp_events;
+SELECT * FROM net.bgp_events ORDER BY ts DESC LIMIT 20;
+
+-- check table engines quickly
+SELECT name, engine_full FROM system.tables WHERE database='net';
+# tail ClickHouse server logs (adjust path if packaged differently)
+sudo tail -F /var/log/clickhouse-server/clickhouse-server.log
+
+# check for MV insert errors in ClickHouse query log (run in clickhouse-client)
+SELECT event_time, query, exception
+FROM system.query_log
+WHERE type = 'Exception'
+  AND event_time >= now() - INTERVAL 10 minute
+ORDER BY event_time DESC
+LIMIT 50;
+
+# check whether Kafka consumer group exists & offsets
+$KAFKA_BIN/kafka-consumer-groups.sh --bootstrap-server $KAFKA_BOOTSTRAP --describe --group $CH_GROUP
+
+# verify kafka connectivity (from ClickHouse host)
+nc -vz localhost 9092
+
+# show Kafka topic list and describe
+$KAFKA_BIN/kafka-topics.sh --bootstrap-server $KAFKA_BOOTSTRAP --list
+$KAFKA_BIN/kafka-topics.sh --bootstrap-server $KAFKA_BOOTSTRAP --describe --topic $KAFKA_TOPIC
+
+# if ClickHouse shows "Can't get assignment", check Kafka advertised.listeners and DNS:
+# (view server.properties and your advertised.listeners setting)
+SELECT * FROM net.kafka_bgp_raw LIMIT 5 SETTINGS stream_like_engine_allow_direct_select = 1;
+SELECT count() FROM net.bgp_events;
+SELECT * FROM net.bgp_events ORDER BY ts DESC LIMIT 5;
+
+
+cat telemetry_synthetic.csv \
+| clickhouse-client -h <host> -p 9000 -d netops -u default --password \
+  --query="INSERT INTO telemetry FORMAT CSVWithNames"
+
+clickhouse-client --host localhost --port 9000 --database default -u default --password='Sudhin12'
+
+clickhouse-client --host localhost --port 9000 --database default \
+  -u default --password='Sudhin12' \
+  --query="INSERT INTO telemetry FORMAT CSVWithNames" \
+  < /mnt/d/SQL/clickhouse/telemetry_synthetic.csv

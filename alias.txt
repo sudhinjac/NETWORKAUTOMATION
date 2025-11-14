@@ -28,6 +28,18 @@ bin/kafka-console-consumer.sh --topic test-topic --from-beginning --bootstrap-se
 
 sudo ip route add 192.168.255.0/24 via 172.24.128.1
 
+!!!! DOCKER TO GET SU PERMSISSION
+
+sudo groupadd docker
+sudhin@sudhin-VMware-Virtual-Platform:~$ sudo usermod -aG docker $USER
+sudhin@sudhin-VMware-Virtual-Platform:~$ docker ps -a
+
+docker run --rm apache/kafka:4.0.1 /opt/kafka/bin/kafka-storage.sh
+ random-uuid
+
+ docker run --rm -v $(pwd)/kafka-data:/tmp/kraft-data apache/kafka:4.0.1 /opt/kafka/bin/kafka-storage.sh format --cluster-id ODBxZXfJThKSE8-W5nw--A --config /opt/kafka/config/server.properties --standalone
+
+
 sudo docker run -d \
   --name openwebui \
   -p 8080:8080 \

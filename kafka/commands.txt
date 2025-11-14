@@ -8,14 +8,14 @@ bin/zookeeper-server-start.sh config/zookeeper.properties
 bin/zookeeper-server-start.sh config/zookeeper.properties
 # In another:
 bin/kafka-server-start.sh config/server.properties
-rm -rf /tmp/kafka-logskafka-topics.sh --create --topic router-metrics --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
+
 # Create topic:
 bin/kafka-topics.sh --create --topic bgp-status --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
-
+ bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic bgp-telemetry
 bin/kafka-server-start.sh config/server.properties
 📡 Subscribed to gNMI BGP state stream. Sending to Kafka...
 ✅ Sent to Kafka: {"timestamp":..., "path": ..., "value": ...}
-
+./bin/start-cluster.sh
 bin/kafka-console-consumer.sh --topic bgp-status --bootstrap-server localhost:9092 --from-beginning
 
 bin/kafka-console-consumer.sh --topic bgp-status --from-beginning --bootstrap-server localhost:9092
@@ -23,7 +23,7 @@ udhin@sudhin:/tmp/kafka-logs/bgp-status-0$
 sudhin@sudhin:/tmp/kafka-logs/bgp-status-0$ pwd
 /tmp/kafka-logs/bgp-status-0
 sudhin@sudhin:/tmp/kafka-logs/bgp-status-0$
-
+sudo ip route add 192.168.255.0/24 via 172.24.128.1
 bin/kafka-topics.sh --create --topic bgp-telemetry --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
 cd ~/your-go-project/
@@ -35,3 +35,23 @@ go get github.com/Shopify/sarama@v1.37.0
 go clean -modcache
 
 go mod tidy
+
+docker exec -it kafka-broker bash
+
+sudo ip route add 192.168.255.0/24 via 172.24.128.1
+
+udo groupadd docker
+sudhin@sudhin-VMware-Virtual-Platform:~$ sudo usermod -aG docker $USER
+sudhin@sudhin-VMware-Virtual-Platform:~$ docker ps -a
+
+docker run --rm apache/kafka:4.0.1 /opt/kafka/bin/kafka-storage.sh
+ random-uuid
+
+ docker run --rm -v $(pwd)/kafka-data:/tmp/kraft-data apache/kafka:4.0.1 /opt/kafka/bin/kafka-storage.sh format --cluster-id ODBxZXfJThKSE8-W5nw--A --config /opt/kafka/config/server.properties --standalone
+
+docker compose up -d
+
+
+docker logs kafka-broker
+
+sudo docker run -d \
