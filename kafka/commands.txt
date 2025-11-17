@@ -12,11 +12,21 @@ bin/kafka-server-start.sh config/server.properties
 # Create topic:
 bin/kafka-topics.sh --create --topic bgp-status --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
  bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic bgp-telemetry
+
+
+ fka/
+sudhin@sudhin:~/kafka/kafka$ bin/kafka-topics.sh --create --topic bgp-telemetry --bootstrap-server localhost:9092 --partitions 4 --replication-factor 1
+
+
+
 bin/kafka-server-start.sh config/server.properties
 📡 Subscribed to gNMI BGP state stream. Sending to Kafka...
 ✅ Sent to Kafka: {"timestamp":..., "path": ..., "value": ...}
 ./bin/start-cluster.sh
+
 bin/kafka-console-consumer.sh --topic bgp-status --bootstrap-server localhost:9092 --from-beginning
+
+
 
 bin/kafka-console-consumer.sh --topic bgp-status --from-beginning --bootstrap-server localhost:9092
 udhin@sudhin:/tmp/kafka-logs/bgp-status-0$
