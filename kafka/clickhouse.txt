@@ -65,7 +65,7 @@ CREATE TABLE net.kafka_bgp_raw (
 SETTINGS
   kafka_broker_list = 'localhost:9092',
   kafka_topic_list  = 'bgp-telemetry',
-  kafka_group_name  = 'ch_clickhouse_bgp_01',
+  kafka_group_name  = 'ch_bgp_consumer_local_001',
   kafka_format      = 'JSONEachRow',
   kafka_num_consumers = 3;
 
@@ -131,3 +131,150 @@ clickhouse-client --host localhost --port 9000 --database default \
   -u default --password='Sudhin12' \
   --query="INSERT INTO telemetry FORMAT CSVWithNames" \
   < /mnt/d/SQL/clickhouse/telemetry_synthetic.csv
+
+
+SELECT min(timestamp) AS min_ts, max(timestamp) AS max_ts, count() AS rows
+FROM telemetry;
+
+SELECT *
+FROM telemetry
+WHERE timestamp BETWEEN toDateTime('2025-01-01 00:00:00') AND toDateTime('2025-01-01 04:00:00')
+  AND cpu_usage >= 90
+ORDER BY timestamp DESC
+LIMIT 200;
+
+
+SELECT device_id, countIf(cpu_usage >= 90) AS hot_samples
+FROM telemetry
+GROUP BY device_id
+ORDER BY hot_samples DESC
+LIMIT 20;
+
+INSERT INTO telemetry
+SELECT
+    now() - number * 60 AS timestamp,
+    concat('router-', toString(1 + rand() % 50)) AS device_id,
+    arrayElement(['eth0','eth1','xe-0/0/0','xe-0/0/1'], (rand() % 4) + 1) AS interface,
+    rand() % 100 AS cpu_usage,
+    rand() % 100 AS mem_usage,
+    rand() % 5   AS packet_loss,
+    rand() % 200 AS latency_ms,
+    arrayElement(['up','down','flap'], (rand() % 3) + 1) AS bgp_state
+FROM numbers(1000);
+
+
+SELECT max(timestamp) FROM telemetry;
+
+WITH ( now() - (SELECT max(timestamp) FROM telemetry) ) AS delta
+INSERT INTO telemetry
+SELECT
+    timestamp + delta AS timestamp,
+    device_id,
+    interface,
+    cpu_usage,
+    mem_usage,
+    packet_loss,
+    latency_ms,
+    bgp_state
+FROM telemetry;
+
+
+SELECT timestamp, device_id, interface, cpu_usage
+FROM telemetry
+WHERE cpu_usage >= 95
+ORDER BY cpu_usage DESC
+LIMIT 200;
+
+
+
+WITH base AS (
+  SELECT device_id, quantile(0.95)(latency_ms) AS p95_lat
+  FROM telemetry
+  GROUP BY device_id
+)
+SELECT t.timestamp, t.device_id, t.interface, t.latency_ms, b.p95_lat
+FROM telemetry t
+JOIN base b USING (device_id)
+WHERE t.latency_ms > b.p95_lat
+ORDER BY t.latency_ms - b.p95_lat DESC
+LIMIT 200;
+
+WITH base AS (
+  SELECT device_id, quantile(0.95)(latency_ms) AS p95_lat
+  FROM telemetry
+  GROUP BY device_id
+)
+SELECT t.timestamp, t.device_id, t.interface, t.latency_ms, b.p95_lat
+FROM telemetry t
+JOIN base b USING (device_id)
+WHERE t.latency_ms > b.p95_lat
+ORDER BY t.latency_ms - b.p95_lat DESC
+LIMIT 200;
+
+
+ clickhouse-client --user default --password Sudhin12 --port 9000
+-q "SELECT count() FROM net.bgp_events"
+
+ while true; do     clickhouse-client       --user default       --password Sudhin12       -q "SELECT * FROM net.bgp_events ORDER BY ts DESC LIMIT 1";     sleep
+
+1; done
+
+
+while true; do
+    clickhouse-client \
+      --user default \
+      --password Sudhin12 \
+      -q "SELECT now() AS t, count() AS rows FROM net.bgp_events";
+    sleep 1;
+done
+
+
+-- 0) (optional) stop any existing materialized view work
+DROP MATERIALIZED VIEW IF EXISTS net.mv_kafka_to_events;
+DROP TABLE IF EXISTS net.kafka_bgp_raw;
+DROP TABLE IF EXISTS net.bgp_events;
+DROP DATABASE IF EXISTS net;
+
+-- 1) create database
+CREATE DATABASE IF NOT EXISTS net;
+
+-- 2) create MergeTree target table with non-nullable ts
+CREATE TABLE net.bgp_events (
+  router String,
+  ts DateTime64(3),          -- non-nullable to avoid allow_nullable_key errors
+  bgp_neighbors String,
+  interfaces String
+) ENGINE = MergeTree()
+ORDER BY (router, ts)
+SETTINGS index_granularity = 8192;
+
+-- 3) create Kafka engine table (source). Keep exact broker/topic and consumer group.
+CREATE TABLE net.kafka_bgp_raw (
+  router String,
+  `timestamp` String,
+  bgp_neighbors String,
+  interfaces String
+) ENGINE = Kafka
+SETTINGS
+  kafka_broker_list = 'localhost:9092',
+  kafka_topic_list  = 'bgp-telemetry',
+  kafka_group_name  = 'ch_bgp_consumer_local_001',
+  kafka_format      = 'JSONEachRow',
+  kafka_num_consumers = 3;
+
+-- 4) (optional) allow direct select on stream-like engines for debugging in this session
+SET stream_like_engine_allow_direct_select = 1;
+
+-- 5) create materialized view in same DB and reference source by local name
+USE net;
+
+DROP TABLE IF EXISTS mv_kafka_to_events; -- safe because some older versions treat MV as table
+CREATE MATERIALIZED VIEW mv_kafka_to_events
+TO bgp_events AS
+SELECT
+  router,
+  -- parse timestamp; if parsing fails, fallback to current time to keep target non-nullable
+  coalesce(parseDateTimeBestEffortOrNull(`timestamp`), now()) AS ts,
+  bgp_neighbors,
+  interfaces
+FROM kafka_bgp_raw;

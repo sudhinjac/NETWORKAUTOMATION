@@ -182,7 +182,7 @@ func pathToString(p *gnmi.Path) string {
 // MAIN
 func main() {
 	routers := []Router{
-		{"Router1", "192.168.255.137:6030", "sudhin", "sudhin"},
+		{"Router1", "192.168.255.141:6030", "sudhin", "sudhin"},
 		{"Router2", "192.168.255.138:6030", "sudhin", "sudhin"},
 	}
 

@@ -24,7 +24,7 @@ sudhin@sudhin:/tmp/kafka-logs/bgp-status-0$ pwd
 /tmp/kafka-logs/bgp-status-0
 sudhin@sudhin:/tmp/kafka-logs/bgp-status-0$
 sudo ip route add 192.168.255.0/24 via 172.24.128.1
-bin/kafka-topics.sh --create --topic bgp-telemetry --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+bin/kafka-topics.sh --create --topic bgp-telemetry --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
 
 cd ~/your-go-project/
 go mod init your-module-name   # if you haven't initialized Go modules yet
@@ -40,7 +40,7 @@ docker exec -it kafka-broker bash
 
 sudo ip route add 192.168.255.0/24 via 172.24.128.1
 
-udo groupadd docker
+sudo groupadd docker
 sudhin@sudhin-VMware-Virtual-Platform:~$ sudo usermod -aG docker $USER
 sudhin@sudhin-VMware-Virtual-Platform:~$ docker ps -a
 
@@ -55,3 +55,153 @@ docker compose up -d
 docker logs kafka-broker
 
 sudo docker run -d \
+
+
+dhin@sudhin:~/flink-1.19.3$ export FLINK_HOME=~/flink-1.19.3
+export JOB_PY=/mnt/d/NETWORKAUTOMATION/kafka/bgpflink.py
+sudhin@sudhin:~/flink-1.19.3$ export JARS=~/lib/flink-sql-connector-kafka_2.12-1.19.3.jar,~/lib/flink-json-1.19.3.jar,~/
+lib/kafka-clients-3.5.1.jar
+sudhin@sudhin:~/flink-1.19.3$
+
+~/kafka/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
+~/kafka/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic bgp-telemetry
+~/kafka/kafka/bin/kafka-console-consumer.sh \
+  --bootstrap-server localhost:9092 \
+  --topic bgp-telemetry \
+  --from-beginning \
+  --max-messages 1
+~/kafka/kafka/bin/kafka-console-consumer.sh \
+  --bootstrap-server localhost:9092 \
+  --topic bgp-telemetry \
+  --group ch_bgp_consumer_local_001 \
+  --max-messages 1
+~/kafka/kafka/bin/kafka-consumer-groups.sh \
+  --bootstrap-server localhost:9092 \
+  --describe --group ch_bgp_consumer_local_001
+
+  ~/kafka/kafka/bin/kafka-console-consumer.sh \
+  --bootstrap-server localhost:9092 \
+  --topic bgp-telemetry \
+  --group ch_bgp_consumer_local_001 \
+  --from-beginning \
+  --max-messages 1
+
+
+./bin/stop-cluster.sh
+
+sudo ip route add 192.168.255.0/24 via 172.24.128.1
+bin/kafka-topics.sh --create --topic bgp-telemetry --bootstrap-server localhost:9092 --partitions 4 --replication-factor 3
+
+cd ~/your-go-project/
+
+bin/kafka-console-consumer.sh \
+  --bootstrap-server localhost:9092 \
+  --topic bgp-telemetry \
+  --group ch_bgp_consumer_local_001 \
+  --from-beginning
+
+  docker run --rm -it -p 9080:8080 \
+  -e KAFKA_CLUSTERS_0_NAME=Local \
+  -e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=host.docker.internal:9092 \
+  provectuslabs/kafka-ui:latest
+
+
+  bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic bgp-telemetry
+sudhin@sudhin:~/kafka/kafka$ sudo nano /etc/systemd/system/kafka.service
+sudhin@sudhin:~/kafka/kafka$ sudo systemctl daemon-reload
+sudhin@sudhin:~/kafka/kafka$ sudo systemctl start zookeeper
+sudhin@sudhin:~/kafka/kafka$ sudo systemctl start kafka
+sudhin@sudhin:~/kafka/kafka$ ollama list
+
+
+# reload systemd so it reads the new unit
+sudo systemctl daemon-reload
+
+# enable zookeeper & kafka to auto-start on boot
+sudo systemctl enable zookeeper
+sudo systemctl enable kafka
+
+# start zookeeper first (it must be active before kafka)
+sudo systemctl start zookeeper
+# wait a moment, confirm zookeeper is active
+sudo systemctl status zookeeper --no-pager
+
+# then start kafka
+sudo systemctl start kafka
+sudo systemctl status kafka --no-pager
+
+sudo systemctl daemon-reload
+
+# enable so it can auto-start on WSL boot
+sudo systemctl enable zookeeper
+
+# start and show status
+sudo systemctl start zookeeper
+sudo systemctl status zookeeper --no-pager
+docker run --rm -it -p 9080:8080 \
+  -e KAFKA_CLUSTERS_0_NAME=Local \
+  -e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=host.docker.internal:9092 \
+  provectuslabs/kafka-ui:latest
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+sudo tee /etc/systemd/system/kafka.service > /dev/null <<'EOF'
+[Unit]
+Description=Kafka Service
+After=network.target zookeeper.service
+Requires=zookeeper.service
+
+[Service]
+User=sudhin
+Group=sudhin
+WorkingDirectory=/home/sudhin/kafka/kafka
+ExecStart=/home/sudhin/kafka/kafka/bin/kafka-server-start.sh /home/sudhin/kafka/kafka/config/server.properties
+ExecStop=/home/sudhin/kafka/kafka/bin/kafka-server-stop.sh
+Restart=on-failure
+RestartSec=5
+# Optional Java env (uncomment & set if java is not found when service runs)
+# Environment="JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64"
+# Environment="PATH=/usr/bin:/bin:$JAVA_HOME/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+docker logs -f kafka-1
+docker ps -a
+docker compose ps
+mkdir -p kafka-data/kafka1 kafka-data/kafka2 kafka-data/kafka3
+# ensure docker can write there (your user should be fine)
+sudo chown -R $(id -u):$(id -g) kafka-data
+docker compose down
+rm -rf kafka-data/*
+mkdir -p kafka-data/kafka1 kafka-data/kafka2 kafka-data/kafka3
+docker compose up -d
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+docker exec -it kafka-1 /opt/kafka/bin/kafka-topics.sh --create --topic test-topic --partitions 3 --replication-factor 3 --bootstrap-server kafka-1:29092
+
+
+  docker exec -it kafka-1 \
+  /opt/kafka/bin/kafka-console-consumer.sh \
+  --topic test-topic \
+  --bootstrap-server kafka-1:29092 \
+  --from-beginning
+
+  docker exec -it kafka-1 \
+  /opt/kafka/bin/kafka-console-producer.sh \
+  --topic test-topic \
+  --bootstrap-server kafka-1:29092
+
+
+  @@@@@@@@@@@@@@@@@@@@GO COMMANDS
+
+  go mod init gnmi-sim
+go get github.com/openconfig/gnmi/proto/gnmi google.golang.org/grpc
+go run simulator.go -base-port=6000 -routers=100 -neighbors=100 -interval=2s
+
+
+go mod init gnmi-collector
+go get github.com/segmentio/kafka-go github.com/openconfig/gnmi/proto/gnmi google.golang.org/grpc
+# make sure Kafka is running at localhost:9092 and topic "bgp-telemetry" exists (or kafka-go will create it depending on broker config)
+go run collector.go
+
