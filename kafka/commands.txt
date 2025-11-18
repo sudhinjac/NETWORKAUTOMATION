@@ -115,6 +115,20 @@ bin/kafka-console-consumer.sh \
   -e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=host.docker.internal:9092 \
   provectuslabs/kafka-ui:latest
 
+  FLINK@@@@@@@@@@@@@@@@@@
+
+~/flink-1.19.3/bin/start-cluster.sh  >>> start flink server
+
+ ~/kafka/kafka/bin/kafka-console-consumer.sh \
+  --bootstrap-server localhost:9092 \
+  --topic bgp-telemetry \
+  --group ch_bgp_consumer_flink \
+  --from-beginning \
+  --max-messages 1
+
+  ~/flink-1.19.3/bin/flink list
+
+  ~/flink-1.19.3/bin/flink cancel 20cd6c3c16952e9d5d5e2296dff9972e
 
   bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic bgp-telemetry
 sudhin@sudhin:~/kafka/kafka$ sudo nano /etc/systemd/system/kafka.service
