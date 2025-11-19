@@ -1,0 +1,48 @@
+# from /home/sudhin/flink-1.19.3
+wget -P lib "https://repo1.maven.org/maven2/org/apache/flink/flink-connector-kafka_2.12/1.19.3/flink-connector-kafka_2.12-1.19.3.jar"
+
+
+CREATE DATABASE IF NOT EXISTS telemetry;
+CREATE TABLE IF NOT EXISTS telemetry.cpu_anomalies (
+    host String,
+    timestamp UInt64,
+    cpu_percent UInt8,
+    reason String
+) ENGINE = MergeTree()
+ORDER BY (host, timestamp);
+
+CREATE USER IF NOT EXISTS telemetry_user IDENTIFIED WITH plaintext_password BY 's3cr3t';
+GRANT ALL ON telemetry.* TO telemetry_user;
+
+bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --topic telemetry-cpu --partitions 1 --replication-factor 1
+bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --topic telemetry-cpu-anomalies --partitions 1 --replication-factor 1
+
+/home/sudhin/flink-1.19.3/bin/start-cluster.sh
+
+export CLICKHOUSE_HOST=localhost
+export CLICKHOUSE_PORT=9000
+export CLICKHOUSE_DB=telemetry
+export CLICKHOUSE_TABLE=cpu_anomalies
+export CLICKHOUSE_USER=default
+export CLICKHOUSE_PASSWORD='Sudhin12'
+
+/home/sudhin/flink-1.19.3/bin/flink run -py /mnt/d/NETWORKAUTOMATION/kafka/flinkcpu1.py
+
+python flink_cpu_kafka_to_clickhouse.py
+
+
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic telemetry-cpu-anomalies --from-beginning
+./bin/kafka-storage.sh
+
+bin/kafka-topics.sh --version
+
+bin/kafka-broker-api-versions.sh --version
+
+bin/kafka-server-start.sh --version
+kafka-topics.sh
+kafka-console-producer.sh
+kafka-console-consumer.sh
+kafka-broker-api-versions.sh
+...
+
+

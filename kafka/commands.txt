@@ -106,6 +106,12 @@ cd ~/your-go-project/
 
 bin/kafka-console-consumer.sh \
   --bootstrap-server localhost:9092 \
+  --topic telemetry-cpu \
+  --from-beginning
+
+
+bin/kafka-console-consumer.sh \
+  --bootstrap-server localhost:9092 \
   --topic bgp-telemetry \
   --group ch_bgp_consumer_local_001 \
   --from-beginning
@@ -118,6 +124,12 @@ bin/kafka-console-consumer.sh \
   FLINK@@@@@@@@@@@@@@@@@@
 
 ~/flink-1.19.3/bin/start-cluster.sh  >>> start flink server
+
+bin/kafka-console-consumer.sh \
+  --bootstrap-server localhost:9092 \
+  --topic bgp-telemetry \
+  --group ch_bgp_consumer_local_001 \
+  --from-beginning
 
  ~/kafka/kafka/bin/kafka-console-consumer.sh \
   --bootstrap-server localhost:9092 \
@@ -229,3 +241,24 @@ go get github.com/segmentio/kafka-go github.com/openconfig/gnmi/proto/gnmi googl
 # make sure Kafka is running at localhost:9092 and topic "bgp-telemetry" exists (or kafka-go will create it depending on broker config)
 go run collector.go
 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+bin/kafka-topics.sh --create \
+  --topic telemetry-cpu \
+  --bootstrap-server localhost:9092 \
+  --partitions 1 \
+  --replication-factor 1
+
+  bin/kafka-topics.sh --create \
+  --topic telemetry-cpu-anomalies \
+  --bootstrap-server localhost:9092 \
+  --partitions 1 \
+  --replication-factor 1
+
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+
+kafka-console-consumer.sh \
+  --bootstrap-server localhost:9092 \
+  --topic telemetry-cpu-anomalies \
+  --from-beginning
+
+ /home/sudhin/flink-1.19.3/bin/flink run -py flinkcpu.py
